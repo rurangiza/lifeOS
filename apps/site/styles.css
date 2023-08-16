@@ -62,7 +62,7 @@ h1 {
     font-size: calc(3rem); /* or 30px */
     font-weight: 700;
     padding: 3px 2px;
-    line-height: 1;
+    line-height: 1.22;
     word-break: break-word;
 
     margin-top: 24px;
