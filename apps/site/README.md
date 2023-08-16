@@ -1,10 +1,20 @@
 # Blog
 
-## Improvements
-- [ ] center the text area. add `max-width` & `margin auto`
-- [ ] use [highlight.js](https://highlightjs.org/usage/) for code snippets
+## To-do
+- [ ] write the CSS for my rich-text
+    - [ ] unordered list
+    - [ ] ordered list
+    - [ ] titles
+    - [ ] paragraphs (+ italic, bold, straighthrough)
+    - [ ] elements spacing (header, p, sections)
+- [ ] C++ program that converts Markdown to HTML
+- [ ] 
 
-## Ideas
+## Rich-text inspiration
+- https://rauno.me/craft/nextjs
+- https://www.joshwcomeau.com/javascript/the-const-deception/
+
+## Article Ideas (raw -> explorable explanations)
 - The ideal Makefile
 - Visualizing and implementing a UNIX pipeline
 - C++ concepts (operator overloading, references, objects,..)
