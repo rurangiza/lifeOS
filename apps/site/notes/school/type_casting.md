@@ -16,8 +16,13 @@ keywords: scalar, primitive,
 5. upcast
 
 ## Specific to C++
-1. static cast
-2. dynamic cast
+1. implicit cast
+2. static cast
+3. dynamic cast
+4. reinterpret cast
+5. const cast
+- C-style cast
+
 
 ### Static cast
 ```C++
@@ -37,3 +42,6 @@ int main()
 
 ### Dynamic cast
 It's the only cast that happens in runtime, after compilation. Meaning cast can fail during execution. 
+
+## Useful Links
+- [Finding the type of an object in C++](https://stackoverflow.com/questions/351845/finding-the-type-of-an-object-in-c)
