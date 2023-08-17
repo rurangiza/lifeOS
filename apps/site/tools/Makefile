@@ -1,13 +1,16 @@
 NAME	=	runthis
 FILE	=	markdownToHTML.cpp main.cpp
 
+COMPILER	=	c++ -std=c++17
+FLAGS		=	-Wall -Werror -Wextra
+
 all:
-	c++ -Wall -Werror -Wextra -o $(NAME) $(FILE)
+	$(COMPILER) $(FLAGS) -o $(NAME) $(FILE)
 
 run:
 	./$(NAME)
 clean:
-	rm $(NAME)
+	rm -f $(NAME)
 
 fclean: clean
 

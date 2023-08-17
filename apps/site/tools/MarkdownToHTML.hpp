@@ -2,6 +2,10 @@
     #define MARKDOWNTOHTML_HPP
 
     #include <iostream>
+    #include <fstream>
+    #include <string>
+    #include <filesystem>
+    #include <vector>
 
     #define CBLACK      "\033[0;30m"
     #define CGRAY       "\033[90m"
@@ -18,37 +22,14 @@
             Markdown() {}
             ~Markdown() {}
 
-            int identifyTags(const std::string& prefix, std::string& line) const {
-                if (prefix == "#")
-                    std::cout << CBLUE << "Header 1\n" << CRESET;
-                else if (prefix == "##")
-                    std::cout << CBLUE << "Header 2\n" << CRESET;
-                else if (prefix == "###")
-                    std::cout << CBLUE << "Header 3\n" << CRESET;
-                else if (prefix == "####")
-                    std::cout << CBLUE << "Header 4\n" << CRESET;
-                else if (prefix == "#####")
-                    std::cout << CBLUE << "Header 5\n" << CRESET;
-                else if (prefix == "######")
-                    std::cout << CBLUE << "Header 6\n" << CRESET;
-                else if (prefix == "-") {
-                    if (line.size() >= 5 && line.substr(0, 5) == "- [ ]")
-                        std::cout << CBLUE << "to-do list\n" << CRESET;
-                    else
-                        std::cout << CBLUE << "list\n" << CRESET;
-                }
-                else {
-                    std::cout << CBLUE << "paragraph\n" << CRESET;
-                    // TODO: handle bold, italic, highlight, straighthrough
-                }
-                return 1;
-            }
-
+            static int identifyTags(const std::string& prefix, std::string& line);
             // replace .md file extension with .html
-            std::string rename();
-
+            static std::string rename(std::string markdownFileName);
             // add html tags to line of text based on its identified type
-            void toHTML(std::string markdown);
-};
+            void convertToHTML(std::string markdown);
+            // 
+            std::vector<std::string> getMarkdownFiles(std::string folder);
+
+    };
 
 #endif // MARKDOWNTOHTML_HPP
