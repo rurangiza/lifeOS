@@ -8,3 +8,4 @@ I will start building it vanilla style than as I learn more I will implement fra
 ### To-do
 - [ ] use the rough-notation library to highligh certain keywords when the user first visits my page
 - [ ] make it responsive (mobile, laptop, desktop and ipad)
+- [ ] use custom domain name
