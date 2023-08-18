@@ -169,10 +169,11 @@ ul, ol {
 button {
     font-size: 1rem;
     font-family: var(--paragraph-font);
-    padding: .5em;
-    border-radius: 20px;
+    padding: .8em 1.4rem;
+    border-radius: 40px;
     border: .2px solid var(--orange);
     margin-right: 8px;
+    transition: background-color 0.2s ease-in-out;
 }
 button:hover {
     cursor: pointer;
@@ -184,6 +185,7 @@ button:hover {
     border-color: var(--blue-shy);
 }
 .btn_dark:hover {
+    background-color: var(--blue-shy);
     color: white;
 }
 
