@@ -38,6 +38,9 @@
 :root {
     --paragraph-font: whitney, inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
     --between-section-spacing: .8rem;
+    --orange: #ED7638;
+    --black: rgb(36, 36, 36);
+    --blue: #306EA3;
 }
 
 /*************** STYLES ******************/
@@ -48,6 +51,8 @@ body {
     caret-color: rgb(55, 53, 47);
     box-sizing: border-box;
     padding: 20px 20px;
+    background-color: var(--black);
+    color: white;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -68,6 +73,14 @@ h1 {
     margin-top: 24px;
     /* margin-bottom: 8px; */
     margin-bottom: var(--between-section-spacing);
+    color: var(--orange);
+}
+
+.header_hero {
+    padding: 0px;
+    line-height: 1;
+    margin-top: 8px;
+    /* margin-bottom: 0px; */
 }
 
 h2 {
@@ -77,6 +90,7 @@ h2 {
 
     margin-top: 18px;
     margin-bottom: var(--between-section-spacing);
+    color: var(--orange);
 }
 
 h3, h4, h5, h6 {
@@ -94,7 +108,7 @@ p {
     font-size: calc(1.1875rem);
     font-weight: 500;
     line-height: 1.5;
-    color: #0A0C10;
+    color: white; /* #0A0C10 */
 
     padding: 3px 2px;
     margin-bottom: var(--between-section-spacing);
@@ -151,4 +165,79 @@ ul, ol {
     overflow: auto;
     white-space: nowrap;
     border: solid 4px rgb(17, 17, 17);
+}
+
+/* Buttons */
+
+button {
+    font-size: 1rem;
+    font-family: var(--paragraph-font);
+    padding: .5em;
+    border-radius: 4px;
+    border: .2px solid var(--orange);
+    margin-right: 8px;
+}
+button:hover {
+    cursor: pointer;
+}
+
+.btn_dark {
+    background-color: transparent;
+    color: white;
+}
+.btn_dark:hover {
+    background-color: #ED7638;
+    color: white;
+}
+
+.btn_light {
+    background-color: transparent;
+    color: white;
+    border: transparent;
+}
+.btn_light:hover {
+    background-color: #ed77385a;
+    border-color: #ed77385a;
+}
+
+/* Links */
+
+a {
+    color: var(--orange);
+    text-decoration-line: none;
+    border-bottom: 2px solide red;
+}
+
+/* section */
+
+.about_section {
+    margin-bottom: 4rem;
+}
+
+.about_section > div {
+    margin-top: 24px;
+}
+.project_section {
+    margin-bottom: 4rem;
+}
+
+.project_cards_collection {
+    display: grid;
+    grid-template-columns: 33% auto 33%;
+    column-gap: 8px;
+    row-gap: 8px;
+}
+.project_card {
+    background-color: rgba(128, 128, 128, 0.125);
+    padding: 1rem;
+    border-radius: 4px;
+    height: 100%;
+}
+.project_card:hover {
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.246)
+}
+
+.contact_section {
+    margin-bottom: 4rem;
 }
