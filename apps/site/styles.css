@@ -227,7 +227,7 @@ a:visited {
     margin-bottom: 2rem;
 }
 .project_section > h3 {
-    margin-bottom: .6rem;
+    margin-bottom: 1.2rem;
 }
 
 /****/
@@ -250,7 +250,13 @@ a:visited {
     height: 100%;
     overflow: visible;
 
+    background-color: var(--white-dirt);
+
     transition: background-color 0.1s ease-in-out;
+}
+.project_card:hover {
+    cursor: pointer;
+    background-color: var(--white-dirt);
 }
 .project_card > a {
     color: black;
@@ -264,10 +270,7 @@ a:visited {
 .project_card > p {
     font-size: 14px;
 }
-.project_card:hover {
-    cursor: pointer;
-    background-color: var(--white-dirt);
-}
+
 
 /****/
 
@@ -276,4 +279,32 @@ a:visited {
 }
 .contact_section > p {
     font-size: 14px;
+}
+
+.profile_photo {
+    position: absolute;
+    left: 0;
+
+    border-radius: 0px 50px 50px 0px;
+}
+
+/* REPONSIVE DESIGN */
+
+@media only screen and (max-width: 512px) {
+    .project_cards_collection {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .project_cards_collection {
+        grid-template-columns: 100%;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    button {
+        width: 100%;
+        margin-bottom: 16px;
+    }
 }

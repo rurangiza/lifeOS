@@ -10,5 +10,6 @@ I will start building it vanilla style than as I learn more I will implement fra
 - [ ] use the rough-notation library to highligh certain keywords when the user first visits my page
 - [ ] make it responsive (mobile, laptop, desktop and ipad)
 - [ ] use custom domain name
+- [ ] implement window [effect](https://codepen.io/gayane-gasparyan/pen/jOmaBQK)
 
 [^1]: [Notation in Javascript | Awesome animated scribble library](https://youtu.be/zc7K0rleBkA)

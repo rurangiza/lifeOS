@@ -107,24 +107,31 @@ void Markdown::convertToHTML(std::string markdownFileName) {
         __unused int tag_type = Markdown::identifyTags(prefix, line);
         switch (tag_type) {
             case _h1:
+                // remove markdown tag
                 htmlFile << "<h1>" + line + "</h1>" << std::endl;
                 break ;
             case _h2:
+                // remove markdown tag
                 htmlFile << "<h2>" + line + "</h2>" << std::endl;
                 break ;
             case _h3:
+                // remove markdown tag
                 htmlFile << "<h3>" + line + "</h3>" << std::endl;
                 break ;
             case _h4:
+                // remove markdown tag
                 htmlFile << "<h4>" + line + "</h4>" << std::endl;
                 break ;
             case _h5:
+                // remove markdown tag
                 htmlFile << "<h5>" + line + "</h5>" << std::endl;
                 break ;
             case _h6:
+                // remove markdown tag
                 htmlFile << "<h6>" + line + "</h6>" << std::endl;
                 break ;
             case _p:
+                // remove markdown tag
                 htmlFile << "<p>" + line + "</p>";
                 break ;
             default:

@@ -1,4 +1,4 @@
-NAME	=	runthis
+NAME	=	mdtoHTML
 FILE	=	markdownToHTML.cpp main.cpp
 
 COMPILER	=	c++ -std=c++17
