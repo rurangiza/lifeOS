@@ -102,7 +102,7 @@ h3, h4, h5, h6 {
 /* PARAGRAPHS */
 
 p {
-    font-size: calc(1.1875rem);
+    font-size:1rem ;/* font-size: calc(1.1875rem); */
     font-weight: 400;
     line-height: 1.5;
     color: #0A0C10;
@@ -246,18 +246,18 @@ a:visited {
     position: relative;
     right: .8rem;
     /* margin-left: -1rem; */
+    border: solid var(--white-ditier) 1px;
     border-radius: 10px;
-    height: 300px;
+    height: 100%;
     overflow: visible;
 
-    background-color: var(--white-dirt);
     /* background-color: #0A0C10; */
 
     transition: background-color 0.1s ease-in-out;
 }
 .project_card:hover {
     cursor: pointer;
-    background-color: var(--white-ditier);
+    background-color: var(--gray);
 }
 
 .project_card > a {
@@ -273,6 +273,41 @@ a:visited {
     font-size: 14px;
 }
 
+/* **** */
+
+.article_list_collection {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 1.6rem;
+}
+.article_list_collection a {
+    color: black;
+}
+.article_list_collection a:last-of-type {
+    color: gray;
+}
+.article_list_collection a:last-of-type .icon_small {
+    margin-left: 5px;
+    height: 1.6rem;
+}
+.article_list_element {
+    transition: background-color 0.1s ease-in-out;
+    display: flex;
+    align-items: center;
+    padding: .2rem .4rem;
+    position: relative;
+    right: .4rem;
+}
+.article_list_element:hover {
+    background-color: var(--gray);
+}
+
+
+.icon_small {
+    height: 1.2rem;
+    margin-right: .6rem;
+}
+
 
 /****/
 
@@ -281,13 +316,6 @@ a:visited {
 }
 .contact_section > p {
     font-size: 14px;
-}
-
-.profile_photo {
-    position: absolute;
-    left: 0;
-
-    border-radius: 0px 50px 50px 0px;
 }
 
 /* REPONSIVE DESIGN */
