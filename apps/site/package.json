@@ -4,7 +4,6 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "delete": "rm -rf app/n"
   },
   "dependencies": {
     "@next/mdx": "15.2.0",
