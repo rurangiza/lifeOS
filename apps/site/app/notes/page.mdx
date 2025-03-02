@@ -1,0 +1,41 @@
+import { AnimatedName } from './animated-name.tsx';
+export const metadata = {
+  title: 'Notes',
+  description: 'Introduction to the blog', 
+  alternates: {
+    canonical: '/notes/'
+  }
+};
+
+
+# Notes
+
+<AnimatedName />
+Welcome to my [digital garden](https://maggieappleton.com/garden-history/), the place where I'll be writing to organize my thinking about topics I'm curious about.
+
+Those include:
+- How the [web](https://en.wikipedia.org/wiki/World_Wide_Web) works
+- Building agents
+- [Tools for thoughts](https://maggieappleton.com/tools-for-thought/)
+
+In terms of writing style, I'm especially fan of [explorable explanations](https://worrydream.com/ExplorableExplanations/), which are articles that you don't only read but also interact with.
+
+<hr/>
+
+In the meantime, here is piece of code worth dreaming about.
+
+```javascript
+import DeepThought from 'deepthought';
+const dp = new DeepThought();
+
+const completion = await dp.chat.completion.create({
+  model: "deepthought",
+  messages: [
+    { role: "system", content: "Be helpful and concise" },
+    {
+      role: "human",
+      content: "What is the meaning of life?",
+    },
+  ]
+});
+```

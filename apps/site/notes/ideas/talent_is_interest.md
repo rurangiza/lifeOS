@@ -1,2 +1,0 @@
-# your talent = your interests
-
