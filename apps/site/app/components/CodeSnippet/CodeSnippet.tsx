@@ -1,6 +1,12 @@
 import React, { ComponentPropsWithoutRef } from "react";
 import { Code } from "bright";
 import myTheme from "./theme.json";
+import { Fira_Code } from "next/font/google";
+
+export const fira_code = Fira_Code({
+  subsets: ["latin"],
+  variable: "--font-fire-code",
+});
 
 Code.theme = myTheme;
 
@@ -20,7 +26,7 @@ export default function CodeSnippet({
 
   let lang: string | undefined = className.replace("language-", "");
   return (
-    <div>
+    <div className={fira_code.className}>
       <Code
         lang={lang ? lang : "javascript"}
         title={lang}

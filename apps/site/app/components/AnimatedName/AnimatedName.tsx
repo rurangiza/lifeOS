@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { unstable_ViewTransition as ViewTransition } from "react";
 
-export function AnimatedName() {
+export default function AnimatedName() {
   return (
     <ViewTransition>
       <Link

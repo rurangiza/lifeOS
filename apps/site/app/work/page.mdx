@@ -1,4 +1,5 @@
-import { AnimatedName } from '@/app/notes/AnimatedName';
+import AnimatedName from '@/app/components/AnimatedName/AnimatedName'
+import Subtitle from '@/app/components/Subtitle/Subtitle'
 
 export const metadata = {
   title: 'Work',
@@ -7,24 +8,18 @@ export const metadata = {
   },
 };
 
-export function Small({ children }) {
-  return (
-    <small className="flex text-sm text-gray-500 -mt-3 mb-3">{children}</small>
-  );
-}
-
 # Work
 
 <AnimatedName />
 
 ## DPG Media
 
-<Small>Software Engineer, Oct 2024 - Present</Small>
+<Subtitle>Software Engineer, Oct 2024 - Present</Subtitle>
 
 DPG is a media group based in Belgium and in the nederlands. I joined the Gen AI team to help build LLM solutions based on the needs of employees, from journalist to developer.
 
 ## ReqCon
 
-<Small>AI Engineer, Aug 2024 - Dec 2024</Small>
+<Subtitle>AI Engineer, Aug 2024 - Dec 2024</Subtitle>
 
 ReqCon is a copilot that helps architects in construction project. This was my introduction to the AI. I learned about graphRAG, wrote evals and .
