@@ -12,10 +12,7 @@ export default function CodeSnippet({
   // Inline code block
   if (!className?.includes("language-")) {
     return (
-      <code
-        className="bg-[#EBEAEB] rounded-sm text-sm p-0.5"
-        {...props}
-      >
+      <code className="bg-[#EBEAEB] rounded-sm text-sm p-0.5" {...props}>
         {children}
       </code>
     );
@@ -23,7 +20,7 @@ export default function CodeSnippet({
 
   let lang: string | undefined = className.replace("language-", "");
   return (
-    <div >
+    <div>
       <Code
         lang={lang ? lang : "javascript"}
         title={lang}

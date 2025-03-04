@@ -29,10 +29,13 @@
     "tab.activeForeground": "#6E6E6E",
     "tab.hoverBackground": "#ffffff",
     "tab.unfocusedHoverBackground": "#eaeef280",
-    "tab.border": "#FAFAFA",
+
     "tab.unfocusedActiveBorderTop": "#d0d7de",
-    "tab.activeBorder": "FAFAFA",
-    "tab.unfocusedActiveBorder": "#ffffff",
+
+    "tab.border": "#FAFAFA",
+    "tab.activeBorder": "#FAFAFA",
+    "tab.unfocusedActiveBorder": "#ff0000",
+
     "tab.activeBorderTop": "#FFFFFF",
 
     "focusBorder": "#0969da",

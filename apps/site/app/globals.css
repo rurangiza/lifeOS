@@ -16,6 +16,7 @@
 }
 
 html {
+  font-family: var(--font-inter);
   min-width: 360px;
   scrollbar-gutter: stable;
 }
@@ -33,11 +34,11 @@ h4 {
 
 pre {
   /* background-color: #16161e; */
+  font-family: var(--font-fira-code);
   /* border-radius: 0.5rem; */
-  overflow-x: auto;
-  /* padding: 1rem; */
+  /* overflow-x: auto; */
   /* margin: 1.5rem 0; */
-  line-height: 1;
+  /* line-height: 1; */
 }
 
 /* pre::-webkit-scrollbar {
@@ -54,26 +55,18 @@ code {
   font-size: 14px;
   padding: 0.2em 0.4em;
   border-radius: 0.3em;
-  /* border: 1px solid black; */
-  /* background-color: var(--color-gray-100); */
+  color: #FF2525;
 }
 
 pre code {
-  /* background-color: transparent; */
-  /* padding: 0; */
-  /* border: 1px solid black; */
   font-size: 14px;
   line-height: 1.5;
 }
 
-/* pre code > span .sh__token--identifier {
-  color: white !important;
-} */
-
-/* code:not(pre code) span {
+code:not(pre code) span {
   font-weight: 500;
   color: black !important;
-} */
+}
 
 @media (prefers-color-scheme: dark) {
   code {

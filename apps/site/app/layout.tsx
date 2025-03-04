@@ -1,21 +1,25 @@
-import './globals.css';
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import { Analytics } from '@vercel/analytics/react';
-import { unstable_ViewTransition as ViewTransition } from 'react';
+import "./globals.css";
+import type { Metadata } from "next";
+import { Inter, Fira_Code } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
+import { unstable_ViewTransition as ViewTransition } from "react";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+export const fira_code = Fira_Code({
+  subsets: ["latin"],
+  variable: "--font-fire-code",
+});
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://rurangiza.com'),
+  metadataBase: new URL("https://rurangiza.com"),
   alternates: {
-    canonical: '/',
+    canonical: "/",
   },
   title: {
-    default: 'Arsène Rurangiza',
-    template: '%s | Arsène Rurangiza',
+    default: "Arsène Rurangiza",
+    template: "%s | Arsène Rurangiza",
   },
-  description: 'Software developer, indie-hacker, music lover',
+  description: "Software developer, indie-hacker, music lover",
 };
 
 export default function RootLayout({
@@ -24,11 +28,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.className}`}>
+    <html lang="en" className={`${inter.variable} ${fira_code.variable}`}>
       <body className="antialiased tracking-tigh">
         <div className="min-h-screen flex flex-col justify-between pt-0 md:pt-8 p-8 dark:bg-zinc-950 bg-[#FCFCFC] text-gray-900 dark:text-zinc-200">
           <main className="max-w-[60ch] mx-auto w-full space-y-4">
-          {children}
+            {children}
           </main>
           <Analytics />
         </div>
