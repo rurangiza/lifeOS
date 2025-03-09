@@ -24,7 +24,7 @@ export default function CodeSnippet({
     );
   }
 
-  let lang: string | undefined = className.replace("language-", "");
+  const lang: string | undefined = className.replace("language-", "");
   return (
     <div className={fira_code.className}>
       <Code

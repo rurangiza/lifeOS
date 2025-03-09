@@ -1,8 +1,9 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react";
-import { unstable_ViewTransition as ViewTransition } from "react";
+import Link from "next/link";
+import Footer from "@/app/components/Footer/Footer";
+import Navbar from '@/app/components/Navbar/Navbar'
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -28,9 +29,10 @@ export default function RootLayout({
       <body className="antialiased tracking-tigh">
         <div className="min-h-screen flex flex-col justify-between pt-0 md:pt-8 p-8 dark:bg-zinc-950 bg-[#FCFCFC] text-gray-900 dark:text-zinc-200">
           <main className="max-w-[60ch] mx-auto w-full space-y-4">
+          <Navbar />
             {children}
           </main>
-          <Analytics />
+          <Footer />
         </div>
       </body>
     </html>

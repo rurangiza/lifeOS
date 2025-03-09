@@ -1,6 +1,6 @@
 import React, { ComponentPropsWithoutRef } from "react";
 import Link from "next/link";
-import CodeSnippet from "./app/components/CodeSnippet/CodeSnippet";
+import CodeSnippet from "@/app/components/CodeSnippet/CodeSnippet";
 
 type HeadingProps = ComponentPropsWithoutRef<"h1">;
 type ParagraphProps = ComponentPropsWithoutRef<"p">;

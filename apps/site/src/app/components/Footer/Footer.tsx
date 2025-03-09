@@ -1,4 +1,4 @@
-export function Footer() {
+export default function Footer() {
   const links = [
     { name: "Twitter", url: "https://x.com/arurangi" },
     { name: "Linkedin", url: "https://www.linkedin.com/in/arsenerurangiza/" },
@@ -7,7 +7,7 @@ export function Footer() {
 
   return (
     <footer className="mt-6 text-center">
-      <div className="flex justify-left space-x-4 tracking-tight">
+      <div className="flex justify-center space-x-4 tracking-tight">
         {links.map((link) => (
           <a
             key={link.name}
