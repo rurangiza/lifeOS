@@ -1,6 +1,7 @@
-import HelloWorld from './HelloWorld'
+import { Ball, Square } from './30DaysAnimations'
 import Board from '@/app/components/Board/Board'
 import Subtitle from '@/app/components/Subtitle/Subtitle'
+import Canvas from "@/app/components/Canvas/Canvas"
 
 export const metadata = {
   title: 'Motion Playground',
@@ -14,7 +15,14 @@ export const metadata = {
 
 To write the type of articles I have in ming, I need to be comfortable creating animations. So For 30 days, I will create a little animation to learn [Motion](https://motion.dev/docs/react-quick-start).
 
-## Day 1: Hello World
+## Day 1: small ball
 <Subtitle>2025/03/04</Subtitle>
+<Canvas>
+<Ball />
+</Canvas>
 
-<HelloWorld />
+## Day 2: 
+<Subtitle>2025/03/16</Subtitle>
+
+Click on the Square to make it move
+<Canvas><Square/></Canvas>

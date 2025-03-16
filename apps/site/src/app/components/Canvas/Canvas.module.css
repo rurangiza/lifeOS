@@ -1,0 +1,26 @@
+.dark {
+  --dot-bg: rgb(30, 30, 30);
+  --dot-color: white;
+  --dot-size: 1px;
+  --dot-space: 22px;
+    background:
+      linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+      linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+      var(--dot-color);
+  }
+  
+.light {
+  border: 0.3px solid rgb(181, 181, 181);
+  border-radius: 8px;
+  padding: 16px;
+  overflow: hidden;
+
+  --dot-bg: rgb(255, 255, 255);
+  --dot-color: rgb(186, 186, 186);
+  --dot-size: 1px;
+  --dot-space: 22px;
+    background:
+      linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+      linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+      var(--dot-color);
+  }
