@@ -1,64 +1,32 @@
 @import 'tailwindcss';
 
-@theme {
-  --font-family-sans: 'Inter', sans-serif;
-}
 
 :root {
-  --sh-class: #7aa2f7;
-  --sh-sign: #89ddff;
-  --sh-string: #9ece6a;
-  --sh-keyword: #bb9af7;
-  --sh-comment: #565f89;
-  --sh-jsxliterals: #7aa2f7;
-  --sh-property: #73daca;
-  --sh-entity: #e0af68;
-}
+  --background: #FFFFFF;
+  --foreground: #383838;
 
-html {
-  font-family: var(--font-inter);
-  min-width: 360px;
-  scrollbar-gutter: stable;
+
+
+  --extra: #ff0000;
+  --clr-grey: --color-gray-950;
+  --primary: #802dd9;
+  --secondary: #1949cd;
+  --selection: #ffff75b8;
 }
 
 body {
-  text-rendering: optimizeLegibility;
+  background: var(--background);
+  color: var(--foreground);
 }
 
-h1,
-h2,
-h3,
-h4 {
-  text-wrap: balance;
+::selection {
+  background-color: #ffff75b8;
 }
 
-pre {
-  font-family: var(--font-fira-code);
-}
-
-
-code {
-  font-size: 14px;
-  padding: 0.2em 0.4em;
-  border-radius: 0.3em;
-  color: #FF2525;
-}
-
-pre code {
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-code:not(pre code) span {
-  font-weight: 500;
-  color: black !important;
-}
+  /* dark:bg-zinc-950 bg-[#FCFCFC] text-gray-900 dark:text-zinc-200 */
 
 @media (prefers-color-scheme: dark) {
-  code {
-    font-size: 14px;
-    padding: 0.2em 0.4em;
-    border-radius: 0.3em;
-    background-color: var(--color-zinc-800);
+  :root {
+
   }
 }

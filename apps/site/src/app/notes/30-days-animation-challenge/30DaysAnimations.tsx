@@ -38,14 +38,17 @@ export function Square() {
         background: 'black'
       }}
       initial={{
-        rotate: '0deg'
+        rotate: '0deg',
+        x: 0
       }}
       animate={{
-        rotate: '180deg'
+        rotate: '180deg',
+        x: [0, 500, 0, 75, 0, 200, 0]
       }}
       transition={{
-        duration: 1,
-        ease: 'backOut'
+        duration: 5,
+        ease: 'backOut',
+        times: [0.4, 0.98, 0.4, 0.4, 0.4],
       }}
     ></motion.div>
   )

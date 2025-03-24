@@ -1,6 +1,7 @@
 import React, { ComponentPropsWithoutRef } from "react";
 import Link from "next/link";
 import CodeSnippet from "@/app/components/CodeSnippet/CodeSnippet";
+import Image from "@/app/components/Image/Image";
 
 type HeadingProps = ComponentPropsWithoutRef<"h1">;
 type ParagraphProps = ComponentPropsWithoutRef<"p">;
@@ -8,26 +9,30 @@ type ListProps = ComponentPropsWithoutRef<"ul">;
 type ListItemProps = ComponentPropsWithoutRef<"li">;
 type AnchorProps = ComponentPropsWithoutRef<"a">;
 type BlockquoteProps = ComponentPropsWithoutRef<"blockquote">;
+type ImageProps = ComponentPropsWithoutRef<"img">;
+type HighlightProps = ComponentPropsWithoutRef<"mark">;
 
 const components = {
   h1: (props: HeadingProps) => (
-    <h1 className="font-medium pt-12 mb-0" {...props} />
+    <h1 {...props} className="text-8xl font-black bg-grape"></h1>
   ),
   h2: (props: HeadingProps) => (
-    <h2
-      className="text-gray-800 dark:text-zinc-200 font-medium mt-8 mb-3"
-      {...props}
-    />
+    <h2 {...props} className="text-4xl font-bold"></h2>
   ),
   h3: (props: HeadingProps) => (
-    <h3
-      className="text-gray-800 dark:text-zinc-200 font-medium mt-8 mb-3"
-      {...props}
-    />
+    <h3 {...props} className="text-2xl font-semibold"></h3>
   ),
-  h4: (props: HeadingProps) => <h4 className="font-medium" {...props} />,
+  h4: (props: HeadingProps) => (
+    <h4 {...props} className="text-lg font-medium"></h4>
+  ),
+  h5: (props: HeadingProps) => (
+    <h5 {...props} className="text-sm font-medium"></h5>
+  ),
+  h6: (props: HeadingProps) => (
+    <h6 {...props} className="text-sm font-normal text-gray-500"></h6>
+  ),
   p: (props: ParagraphProps) => (
-    <p className="text-gray-800 dark:text-zinc-300 leading-snug" {...props} />
+    <p className=" text-gray-800 dark:text-zinc-300 leading-snug" {...props} />
   ),
   ol: (props: ListProps) => (
     <ol
@@ -46,7 +51,7 @@ const components = {
     <em className="font-medium" {...props} />
   ),
   strong: (props: ComponentPropsWithoutRef<"strong">) => (
-    <strong className="font-medium" {...props} />
+    <strong className="font-semibold" {...props} />
   ),
   a: ({ href, children, ...props }: AnchorProps) => {
     const className =
@@ -86,32 +91,16 @@ const components = {
       {children}
     </CodeSnippet>
   ),
-  Table: ({ data }: { data: { headers: string[]; rows: string[][] } }) => (
-    <table>
-      <thead>
-        <tr>
-          {data.headers.map((header, index) => (
-            <th key={index}>{header}</th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {data.rows.map((row, index) => (
-          <tr key={index}>
-            {row.map((cell, cellIndex) => (
-              <td key={cellIndex}>{cell}</td>
-            ))}
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  ),
   blockquote: (props: BlockquoteProps) => (
     <blockquote
       className="ml-[0.075em] border-l-3 border-gray-300 pl-4 text-gray-700 dark:border-zinc-600 dark:text-zinc-300"
       {...props}
     />
   ),
+  img: (props: ImageProps) => <Image {...props} />,
+  hr:  () => <hr className="w-48 m-auto h-0.5 text-gray-300 my-8" />,
+  mark: (props: HighlightProps) => <mark {...props} className="bg-[#ffff75b8]"></mark>,
+  selection: (props: HighlightProps) => <mark {...props} style={{backgroundColor: "yellow",}}></mark>,
 };
 
 declare global {

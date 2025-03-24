@@ -1,0 +1,206 @@
+import Image from 'next/image'
+
+import Subtitle from '@/app/components/Subtitle/Subtitle'
+import Canvas from "@/app/components/Canvas/Canvas"
+import Button from "@/app/components/Button/Button"
+import ColorPalette from "@/app/components/ColorPalette/ColorPalette"
+
+export const metadata = {
+  title: 'Design Guide',
+  description: 'My design guide', 
+  alternates: {
+    canonical: '/design'
+  }
+};
+
+## Components / Design System
+
+### Logo
+
+<img src="/logo.png"/>
+
+### Colors
+Brand
+
+<ColorPalette colors={["493D9E", "B2A5FF", "DAD2FF"]}/>
+
+Background
+
+<ColorPalette colors={["FFFFFF", "FAFAFA", "EBEAEB", "797979"]}/>
+
+Foreground (typeface)
+<ColorPalette colors={["383838"]}/>
+
+
+### Typography
+
+Display
+# I've looked at clouds from both sides now
+
+H2 (Title)
+## I've looked at clouds from both sides now
+
+H3
+### I've looked at clouds from both sides now
+
+H4
+#### I've looked at clouds from both sides now
+
+H5
+##### I've looked at clouds from both sides now
+
+H6 (Label)
+##### I've looked at clouds from both sides now
+
+Body
+
+I've looked at clouds from both sides now
+
+Strong
+
+Là, tout n’est qu’**ordre et beauté**. Luxe, calme et volupté.
+
+Emphesis
+
+Là, tout n’est qu’*ordre et beauté*. Luxe, calme et volupté.
+
+## Links
+
+[my website](https://rurangiza.com)
+
+
+### Lists
+
+- First
+- Second
+- Third
+
+1. First
+2. Second
+3. Third
+
+### Horizontal bar
+
+---
+
+### Buttons
+
+<Button>Click here</Button>
+
+### Quote
+
+> I've looked at clouds from both sides now
+
+### Code
+
+Inline code
+
+See you results by running `console.log()` somewhere.
+
+Code-block
+
+```javascript
+import DeepThought from 'deepthought';
+const dp = new DeepThought();
+
+const completion = await dp.chat.completion.create({
+  model: "deepthought",
+  messages: [
+    { role: "system", content: "Be helpful and concise" },
+    {
+      role: "human",
+      content: "What is the meaning of life?",
+    },
+  ]
+});
+```
+
+Code-block with title
+
+Code-block with highlights
+
+### Image
+
+![This is a wabi sabi image](/images/wabisabi.jpeg)
+
+{/* <Image src={im_wabi_sabi} width={500} height={200} alt="wabi sabi image"/> */}
+
+
+### Canvas
+<Canvas>
+  <span> .</span>
+  <h2>This is the canvas</h2>
+  <span> .</span>
+</Canvas>
+
+### Canvas with title
+<Canvas title="An amazing title">
+  <span> .</span>
+  <h2>This is the canvas</h2>
+  <span> .</span>
+</Canvas>
+
+## Example rich-text
+
+---
+
+
+## Understanding Message Queues
+A message queue is a communication mechanism used in distributed systems to enable asynchronous message passing between different components, services, or applications. It acts as a temporary storage where messages are kept until they are processed by the receiving system.
+
+### Key Concepts:
+
+- **Producer**: The sender of messages.
+- **Consumer**: The receiver of messages.
+- **Queue/Topic**: Storage where messages are held until processed.
+- **Routing**: The process of directing messages from producers to appropriate consumers.
+
+### How they work
+A message queue follows a producer-consumer model, where:
+
+- **Producers** create and send messages to the queue.
+- The queue holds messages in a First-In, First-Out (FIFO) order (though some queues allow different processing strategies).
+- **Consumers** retrieve and process messages from the queue.
+- Once a message is processed, it is removed from the queue.
+
+#### Illustration
+<Canvas></Canvas>
+
+Message queues ensure that messages are not lost if a consumer is temporarily unavailable. They also enable load balancing, as multiple consumers can process messages concurrently from the same queue.
+
+#### In code
+
+```python
+def send_message(queue, message_body, message_attributes=None):
+    """
+    Send a message to an Amazon SQS queue.
+
+    :param queue: The queue that receives the message.
+    :param message_body: The body text of the message.
+    :param message_attributes: Custom attributes of the message. These are key-value
+                               pairs that can be whatever you want.
+    :return: The response from SQS that contains the assigned message ID.
+    """
+    -> 
+    if not message_attributes:
+        message_attributes = {}
+
+    try:
+        response = queue.send_message(
+            MessageBody=message_body,
+            MessageAttributes=message_attributes
+        )
+    except ClientError as error:
+        logger.exception("Send message failed: %s", message_body)
+        raise error
+    else:
+        return response
+```
+
+### Examples of Message Brokers
+- **Amazon SQS (Simple Queue Service)** – A managed queue service on AWS.
+- **RabbitMQ (using queue mode)** – An open-source message broker that supports queues.
+- **Apache ActiveMQ** – A widely used open-source message queuing system.
+- **Redis (when used as a queue)** – A fast, in-memory data store that can be used as a message queue.
+
+[^1]: [Wikipedia](https://en.wikipedia.org/wiki/Message_broker): Message broker

@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import Footer from "@/app/components/Footer/Footer";
-import Navbar from '@/app/components/Navbar/Navbar'
+import Navbar from "@/app/components/Navbar/Navbar";
+import { GeistSans } from "geist/font/sans";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -25,11 +26,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en" className={GeistSans.className}>
       <body className="antialiased tracking-tigh">
-        <div className="min-h-screen flex flex-col justify-between pt-0 md:pt-8 p-8 dark:bg-zinc-950 bg-[#FCFCFC] text-gray-900 dark:text-zinc-200">
+        <div className="min-h-screen flex flex-col justify-between pt-0 md:pt-8 p-8">
           <main className="max-w-[60ch] mx-auto w-full space-y-4">
-          <Navbar />
+            <Navbar></Navbar>
             {children}
           </main>
           <Footer />
