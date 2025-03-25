@@ -1,6 +1,7 @@
 import { defineDocumentType, makeSource } from "contentlayer/source-files"
 import rehypePrettyCode from "rehype-pretty-code"
 import { rehypePrettyCodeOptions } from "./.lib/rehypePrettyCode"
+import { transformerCopyButton } from '@rehype-pretty/transformers'
 
 const Post = defineDocumentType(() => ({
   name: "Post",
@@ -20,7 +21,11 @@ export default makeSource({
   documentTypes: [Post],
   mdx: {
     rehypePlugins: [
-      [rehypePrettyCode, rehypePrettyCodeOptions]
+      [
+        rehypePrettyCode,
+        rehypePrettyCodeOptions,
+        transformerCopyButton
+      ]
     ],
   },
 })

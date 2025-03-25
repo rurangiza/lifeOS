@@ -30,7 +30,7 @@ export const mdxComponents: MDXComponents = {
     <h3 {...props} className="text-2xl font-semibold mb-4"></h3>
   ),
   h4: (props: HeadingProps) => (
-    <h4 {...props} className="text-lg font-medium mb-4"></h4>
+    <h4 {...props} className="text-lg font-medium mt-4 mb-0"></h4>
   ),
   h5: (props: HeadingProps) => (
     <h5 {...props} className="text-sm font-medium mb-4"></h5>

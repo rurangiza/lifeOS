@@ -96,7 +96,7 @@ See you results by running `console.log()` somewhere.
 
 Code-block
 
-```javascript
+```py title="llm.py" showLineNumbers
 import DeepThought from 'deepthought';
 const dp = new DeepThought();
 
@@ -167,7 +167,7 @@ Message queues ensure that messages are not lost if a consumer is temporarily un
 
 #### In code
 
-```python
+```py title="Send SQS Message" showLineNumbers {16}
 def send_message(queue, message_body, message_attributes=None):
     """
     Send a message to an Amazon SQS queue.

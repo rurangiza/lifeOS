@@ -27,10 +27,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={GeistSans.className}>
-      <body className="antialiased tracking-tigh">
+      <body className="antialiased tracking-tigh my-8">
         <div className="min-h-screen flex flex-col justify-between pt-0 md:pt-8 p-8">
           <main className="max-w-[60ch] mx-auto w-full space-y-4">
-            <Navbar></Navbar>
+            {/* <Navbar></Navbar> */}
             {children}
           </main>
           <Footer />

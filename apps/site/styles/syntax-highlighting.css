@@ -1,0 +1,54 @@
+/* WRAPPER */
+figure[data-rehype-pretty-code-figure] {
+  overflow: hidden;
+ 
+  background-color: #FAFAFA;
+  border-radius: 0.5rem;
+  border: solid 1px #EDEDED;
+}
+
+/* CODE BLOCK */
+figure[data-rehype-pretty-code-figure] pre code {
+  /* display: grid; */
+  overflow-x: auto;
+
+  background-color: white;
+  line-height: 1.4rem;
+  border-radius: 0px;
+  padding: 1rem 0px;
+}
+
+/* TITLE */
+figure[data-rehype-pretty-code-figure] [data-rehype-pretty-code-title]  {
+  padding: 0.8rem 1rem;
+  border-bottom: solid 1px #EDEDED;
+  font-size: 0.8rem;
+}
+
+/* LINES + HIGHLIGHTED LINES */
+figure[data-rehype-pretty-code-figure] [data-line] {
+  padding-left: 1rem;
+}
+
+figure[data-rehype-pretty-code-figure] [data-highlighted-line] {
+  border-left: solid 2px #1F6FFA;
+  background-color: #1f6ffa36;
+}
+
+/* LINE NUMBERS */
+code[data-line-numbers] {
+  counter-reset: lineNumber;
+}
+
+code[data-line-numbers] > [data-line]::before {
+  counter-increment: lineNumber;
+  content: counter(lineNumber);
+  display: inline-block;
+  text-align: right;
+ 
+  /* stylistic preferences */
+  margin-right: 0.75rem;
+  width: 1rem;
+  color: #A8A8A8;
+  font-size: 0.8rem;
+}
