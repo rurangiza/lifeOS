@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "@/app/components/Image/Image";
 import { ComponentPropsWithoutRef } from "react";
 import type { MDXComponents } from "mdx/types";
+import CodeSnippet from "@/app/components/CodeSnippet/CodeSnippet";
 
 type HeadingProps = ComponentPropsWithoutRef<"h1">;
 type ParagraphProps = ComponentPropsWithoutRef<"p">;
@@ -20,25 +21,25 @@ type HighlightProps = ComponentPropsWithoutRef<"mark">;
 
 export const mdxComponents: MDXComponents = {
   h1: (props: HeadingProps) => (
-    <h1 {...props} className="text-8xl font-black bg-grape"></h1>
+    <h1 {...props} className="text-8xl font-black bg-grape mb-4"></h1>
   ),
   h2: (props: HeadingProps) => (
-    <h2 {...props} className="text-4xl font-bold"></h2>
+    <h2 {...props} className="text-4xl font-bold mb-4"></h2>
   ),
   h3: (props: HeadingProps) => (
-    <h3 {...props} className="text-2xl font-semibold"></h3>
+    <h3 {...props} className="text-2xl font-semibold mb-4"></h3>
   ),
   h4: (props: HeadingProps) => (
-    <h4 {...props} className="text-lg font-medium"></h4>
+    <h4 {...props} className="text-lg font-medium mb-4"></h4>
   ),
   h5: (props: HeadingProps) => (
-    <h5 {...props} className="text-sm font-medium"></h5>
+    <h5 {...props} className="text-sm font-medium mb-4"></h5>
   ),
   h6: (props: HeadingProps) => (
-    <h6 {...props} className="text-sm font-normal text-gray-500"></h6>
+    <h6 {...props} className="text-sm font-normal text-gray-500 mb-4"></h6>
   ),
   p: (props: ParagraphProps) => (
-    <p className=" text-gray-800 dark:text-zinc-300 leading-snug" {...props} />
+    <p className=" text-gray-800 dark:text-zinc-300 leading-snug mb-2 mt-4" {...props} />
   ),
   ol: (props: ListProps) => (
     <ol
@@ -88,6 +89,15 @@ export const mdxComponents: MDXComponents = {
       </a>
     );
   },
+  code: ({
+    children,
+    className,
+    ...props
+  }: ComponentPropsWithoutRef<"code">) => (
+    <CodeSnippet className={className} {...props}>
+      {children}
+    </CodeSnippet>
+  ),
   blockquote: (props: BlockquoteProps) => (
     <blockquote
       className="ml-[0.075em] border-l-3 border-gray-300 pl-4 text-gray-700 dark:border-zinc-600 dark:text-zinc-300"
