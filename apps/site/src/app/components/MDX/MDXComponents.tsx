@@ -1,7 +1,10 @@
-import React, { ComponentPropsWithoutRef } from "react";
+'use client';
+
 import Link from "next/link";
-import CodeSnippet from "@/app/components/CodeSnippet/CodeSnippet";
 import Image from "@/app/components/Image/Image";
+import { ComponentPropsWithoutRef } from "react";
+import type { MDXComponents } from "mdx/types";
+import CodeSnippet from "@/app/components/CodeSnippet/CodeSnippet";
 
 type HeadingProps = ComponentPropsWithoutRef<"h1">;
 type ParagraphProps = ComponentPropsWithoutRef<"p">;
@@ -12,27 +15,31 @@ type BlockquoteProps = ComponentPropsWithoutRef<"blockquote">;
 type ImageProps = ComponentPropsWithoutRef<"img">;
 type HighlightProps = ComponentPropsWithoutRef<"mark">;
 
-const components = {
+// const components: MDXComponents = {
+//   a: ({ href, children }) => <Link href={href as string}>{children}</Link>,
+// };
+
+export const mdxComponents: MDXComponents = {
   h1: (props: HeadingProps) => (
-    <h1 {...props} className="text-8xl font-black bg-grape"></h1>
+    <h1 {...props} className="text-8xl font-black bg-grape mb-4"></h1>
   ),
   h2: (props: HeadingProps) => (
-    <h2 {...props} className="text-4xl font-bold"></h2>
+    <h2 {...props} className="text-4xl font-bold mb-4"></h2>
   ),
   h3: (props: HeadingProps) => (
-    <h3 {...props} className="text-2xl font-semibold"></h3>
+    <h3 {...props} className="text-2xl font-semibold mb-4"></h3>
   ),
   h4: (props: HeadingProps) => (
-    <h4 {...props} className="text-lg font-medium"></h4>
+    <h4 {...props} className="text-lg font-medium mt-4 mb-0"></h4>
   ),
   h5: (props: HeadingProps) => (
-    <h5 {...props} className="text-sm font-medium"></h5>
+    <h5 {...props} className="text-sm font-medium mb-4"></h5>
   ),
   h6: (props: HeadingProps) => (
-    <h6 {...props} className="text-sm font-normal text-gray-500"></h6>
+    <h6 {...props} className="text-sm font-normal text-gray-500 mb-4"></h6>
   ),
   p: (props: ParagraphProps) => (
-    <p className=" text-gray-800 dark:text-zinc-300 leading-snug" {...props} />
+    <p className=" text-gray-800 dark:text-zinc-300 leading-snug mb-2 mt-4" {...props} />
   ),
   ol: (props: ListProps) => (
     <ol
@@ -98,15 +105,11 @@ const components = {
     />
   ),
   img: (props: ImageProps) => <Image {...props} />,
-  hr:  () => <hr className="w-48 m-auto h-0.5 text-gray-300 my-8" />,
-  mark: (props: HighlightProps) => <mark {...props} className="bg-[#ffff75b8]"></mark>,
-  selection: (props: HighlightProps) => <mark {...props} style={{backgroundColor: "yellow",}}></mark>,
+  hr: () => <hr className="w-48 m-auto h-0.5 text-gray-300 my-8" />,
+  mark: (props: HighlightProps) => (
+    <mark {...props} className="bg-[#ffff75b8]"></mark>
+  ),
+  selection: (props: HighlightProps) => (
+    <mark {...props} style={{ backgroundColor: "yellow" }}></mark>
+  ),
 };
-
-declare global {
-  type MDXProvidedComponents = typeof components;
-}
-
-export function useMDXComponents(): MDXProvidedComponents {
-  return components;
-}

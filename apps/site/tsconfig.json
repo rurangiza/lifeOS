@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "ES2017",
     "lib": [
       "dom",
@@ -23,6 +24,7 @@
       }
     ],
     "paths": {
+      "contentlayer/generated": ["./.contentlayer/generated"],
       "@/*": [
         "./src/*"
       ]
@@ -33,7 +35,9 @@
     "**/*.mdx",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    ".contentlayer/generated",
+    "contentlayer.config.js",
   ],
   "exclude": [
     "node_modules"

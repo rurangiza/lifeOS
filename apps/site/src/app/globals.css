@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-
+@import "../../styles/syntax-highlighting.css";
 
 :root {
   --background: #FFFFFF;
@@ -20,7 +20,7 @@ body {
 }
 
 ::selection {
-  background-color: #ffff75b8;
+  background-color: #AACCF2;
 }
 
   /* dark:bg-zinc-950 bg-[#FCFCFC] text-gray-900 dark:text-zinc-200 */
