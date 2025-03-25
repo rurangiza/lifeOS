@@ -1,20 +1,25 @@
 import type { NextConfig } from 'next';
-import createMDX from '@next/mdx';
-import remarkGfm from 'remark-gfm'
+import { withContentlayer } from "next-contentlayer";
+import webpack from 'webpack';
 
 const nextConfig: NextConfig = {
+  reactStrictMode: true,
   devIndicators: false,
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   experimental: {
     viewTransition: true
   },
+  webpack: (config, { isServer }) => {
+    // Polyfill `process` for the browser; only needed on the client side.
+    if (!isServer) {
+      config.plugins.push(
+        new webpack.ProvidePlugin({
+          process: 'process/browser',
+        })
+      );
+    }
+    return config;
+  },
 };
 
-const withMDX = createMDX({
-  options: {
-    remarkPlugins: [remarkGfm],
-    rehypePlugins: [],
-  }
-});
-
-export default withMDX(nextConfig);
+module.exports = withContentlayer(nextConfig)
