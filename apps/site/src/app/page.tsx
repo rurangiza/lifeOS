@@ -7,7 +7,7 @@ interface Note {
   date: string;
 }
 function PostCard(post: Post) {
-  const markup = { __html: post.body || "" };
+  const markup = { __html: (post.body as any).html || "" };
   return (
     <div className="mb-8">
       <h2 className="mb-1 text-xl">
