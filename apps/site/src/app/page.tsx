@@ -7,7 +7,7 @@ interface Note {
   date: string;
 }
 function PostCard(post: Post) {
-  const markup = { __html: post.body?.body || "" };
+  const markup = { __html: post.body || "" };
   return (
     <div className="mb-8">
       <h2 className="mb-1 text-xl">
@@ -36,7 +36,10 @@ export default function Home() {
 
   return (
     <div>
-      <h1 className="mb-8 text-2xl font-black">Hi, I'm Arsène. I'm a software engineer interrested in building tools for thoughts, agents and better UX.</h1>
+      <h1 className="mb-8 text-2xl font-black">
+        Hi, I'm Arsène. I'm a software engineer interrested in building tools
+        for thoughts, agents and better UX.
+      </h1>
       {posts.map((post, idx) => (
         <PostCard key={idx} {...post} />
       ))}
