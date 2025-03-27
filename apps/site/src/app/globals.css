@@ -5,8 +5,6 @@
   --background: #FFFFFF;
   --foreground: #383838;
 
-
-
   --extra: #ff0000;
   --clr-grey: --color-gray-950;
   --primary: #802dd9;
@@ -19,11 +17,19 @@ body {
   color: var(--foreground);
 }
 
+h1, h3, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+h1 {
+  font-size: 2.25rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+
 ::selection {
   background-color: #AACCF2;
 }
-
-  /* dark:bg-zinc-950 bg-[#FCFCFC] text-gray-900 dark:text-zinc-200 */
 
 @media (prefers-color-scheme: dark) {
   :root {

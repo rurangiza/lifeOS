@@ -5,6 +5,8 @@ import Link from "next/link";
 import Footer from "@/app/components/Footer/Footer";
 import Navbar from "@/app/components/Navbar/Navbar";
 import { GeistSans } from "geist/font/sans";
+import AnimatedName from "./components/AnimatedName/AnimatedName";
+import { NameTransition } from "./components/NameTransition/NameTransition";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -30,7 +32,7 @@ export default function RootLayout({
       <body className="antialiased tracking-tigh my-8">
         <div className="min-h-screen flex flex-col justify-between pt-0 md:pt-8 p-8">
           <main className="max-w-[60ch] mx-auto w-full space-y-4">
-            {/* <Navbar></Navbar> */}
+            <Navbar></Navbar>
             {children}
           </main>
           <Footer />

@@ -21,11 +21,11 @@ export default function Canvas({
         </div>
       )}
       <div
-        className="border-[0.3px] border-gray-200 rounded-lg p-4 overflow-hidden mt-0 
+        className="border-[0.3px] border-gray-200 rounded-lg py-4 px-8 overflow-hidden mt-0 
                     bg-white bg-[linear-gradient(90deg,transparent_1px,#fff_0),linear-gradient(transparent_1px,#fff_0)] 
                     bg-[size:22px_22px] [background-position:center_center]"
       >
-        <div className={`flex flex-col ${centered && "items-center"}`}>
+        <div className={`flex flex-col grow`}>
           {children}
         </div>
       </div>

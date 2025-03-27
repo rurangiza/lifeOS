@@ -5,6 +5,7 @@ import Image from "@/app/components/Image/Image";
 import { ComponentPropsWithoutRef } from "react";
 import type { MDXComponents } from "mdx/types";
 import CodeSnippet from "@/app/components/CodeSnippet/CodeSnippet";
+import Canvas from "@/app/components/Canvas/Canvas";
 
 type HeadingProps = ComponentPropsWithoutRef<"h1">;
 type ParagraphProps = ComponentPropsWithoutRef<"p">;
@@ -39,17 +40,17 @@ export const mdxComponents: MDXComponents = {
     <h6 {...props} className="text-sm font-normal text-gray-500 mb-4"></h6>
   ),
   p: (props: ParagraphProps) => (
-    <p className=" text-gray-800 dark:text-zinc-300 leading-snug mb-2 mt-4" {...props} />
+    <p className=" text-gray-800 leading-snug mb-2 mt-4" {...props} />
   ),
   ol: (props: ListProps) => (
     <ol
-      className="text-gray-800 dark:text-zinc-300 list-decimal pl-5 space-y-2"
+      className="text-gray-800 list-decimal pl-5 space-y-2"
       {...props}
     />
   ),
   ul: (props: ListProps) => (
     <ul
-      className="text-gray-800 dark:text-zinc-300 list-disc pl-5 space-y-1"
+      className="text-gray-800 list-disc pl-5 space-y-1"
       {...props}
     />
   ),
@@ -62,7 +63,7 @@ export const mdxComponents: MDXComponents = {
   ),
   a: ({ href, children, ...props }: AnchorProps) => {
     const className =
-      "text-blue-500 hover:text-blue-700 dark:text-gray-400 hover:dark:text-gray-300 dark:underline dark:underline-offset-2 dark:decoration-gray-800";
+      "text-blue-500 hover:text-blue-700";
     if (href?.startsWith("/")) {
       return (
         <Link href={href} className={className} {...props}>
@@ -100,7 +101,7 @@ export const mdxComponents: MDXComponents = {
   ),
   blockquote: (props: BlockquoteProps) => (
     <blockquote
-      className="ml-[0.075em] border-l-3 border-gray-300 pl-4 text-gray-700 dark:border-zinc-600 dark:text-zinc-300"
+      className="ml-[0.075em] border-l-3 border-gray-300 pl-4 text-gray-700"
       {...props}
     />
   ),
@@ -112,4 +113,5 @@ export const mdxComponents: MDXComponents = {
   selection: (props: HighlightProps) => (
     <mark {...props} style={{ backgroundColor: "yellow" }}></mark>
   ),
+  Canvas: (props) => <Canvas {...props}></Canvas>
 };
