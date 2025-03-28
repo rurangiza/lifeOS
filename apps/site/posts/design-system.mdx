@@ -89,15 +89,40 @@ Là, tout n’est qu’*ordre et beauté*. Luxe, calme et volupté.
 
 > I've looked at clouds from both sides now
 
+### Callout
+
+<Callout mode="info">Highlights information that users should take into account, even when skimming.</Callout>
+
+<Callout mode="warning">Critical content demanding immediate user attention due to potential risks.</Callout>
+
+<Callout mode="danger">Negative potential consequences of an action.</Callout>
+
 ### Code
 
 Inline code
 
-See you results by running `console.log()` somewhere.
+`console.log()`
 
-Code-block
+Code-block (basic)
 
-```py title="llm.py" showLineNumbers
+```py showLineNumbers
+import DeepThought from 'deepthought';
+const dp = new DeepThought();
+
+const completion = await dp.chat.completion.create({
+  model: "deepthought",
+  messages: [
+    { role: "system", content: "Be helpful and concise" },
+    {
+      role: "human",
+      content: "What is the meaning of life?",
+    },
+  ]
+});
+```
+Code-block (enhanced)
+
+```py title="llm.py" showLineNumbers {9, 10}
 import DeepThought from 'deepthought';
 const dp = new DeepThought();
 
@@ -113,15 +138,9 @@ const completion = await dp.chat.completion.create({
 });
 ```
 
-Code-block with title
-
-Code-block with highlights
-
 ### Image
 
 ![This is a wabi sabi image](/images/wabisabi.jpeg)
-
-{/* <Image src={im_wabi_sabi} width={500} height={200} alt="wabi sabi image"/> */}
 
 
 ### Canvas
@@ -138,10 +157,8 @@ Code-block with highlights
   <span> .</span>
 </Canvas>
 
-## Example rich-text
 
 ---
-
 
 ## Understanding Message Queues
 A message queue is a communication mechanism used in distributed systems to enable asynchronous message passing between different components, services, or applications. It acts as a temporary storage where messages are kept until they are processed by the receiving system.
@@ -160,9 +177,6 @@ A message queue follows a producer-consumer model, where:
 - The queue holds messages in a First-In, First-Out (FIFO) order (though some queues allow different processing strategies).
 - **Consumers** retrieve and process messages from the queue.
 - Once a message is processed, it is removed from the queue.
-
-#### Illustration
-<Canvas></Canvas>
 
 Message queues ensure that messages are not lost if a consumer is temporarily unavailable. They also enable load balancing, as multiple consumers can process messages concurrently from the same queue.
 

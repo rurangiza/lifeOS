@@ -6,6 +6,7 @@ import { ComponentPropsWithoutRef } from "react";
 import type { MDXComponents } from "mdx/types";
 import CodeSnippet from "@/app/components/CodeSnippet/CodeSnippet";
 import Canvas from "@/app/components/Canvas/Canvas";
+import { Callout } from "@/app/components/Callout/Callout";
 
 type HeadingProps = ComponentPropsWithoutRef<"h1">;
 type ParagraphProps = ComponentPropsWithoutRef<"p">;
@@ -28,7 +29,7 @@ export const mdxComponents: MDXComponents = {
     <h2 {...props} className="text-4xl font-bold mb-4"></h2>
   ),
   h3: (props: HeadingProps) => (
-    <h3 {...props} className="text-2xl font-semibold mb-4"></h3>
+    <h3 {...props} className="text-2xl font-semibold mb-4 mt-8"></h3>
   ),
   h4: (props: HeadingProps) => (
     <h4 {...props} className="text-lg font-medium mt-4 mb-0"></h4>
@@ -62,8 +63,7 @@ export const mdxComponents: MDXComponents = {
     <strong className="font-semibold" {...props} />
   ),
   a: ({ href, children, ...props }: AnchorProps) => {
-    const className =
-      "text-blue-500 hover:text-blue-700";
+    const className = "text-blue-500 hover:text-blue-700";
     if (href?.startsWith("/")) {
       return (
         <Link href={href} className={className} {...props}>
@@ -113,5 +113,6 @@ export const mdxComponents: MDXComponents = {
   selection: (props: HighlightProps) => (
     <mark {...props} style={{ backgroundColor: "yellow" }}></mark>
   ),
-  Canvas: (props) => <Canvas {...props}></Canvas>
+  Canvas: (props) => <Canvas {...props}></Canvas>,
+  Callout: ({children, mode}) => <Callout mode={mode}>{children}</Callout>
 };
