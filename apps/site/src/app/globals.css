@@ -3,32 +3,46 @@
 
 :root {
   --background: #FFFFFF;
-  --foreground: #383838;
+  --foreground: #0A0D10;
 
   --extra: #ff0000;
   --clr-grey: --color-gray-950;
-  --primary: #802dd9;
+  --primary: #4242f9;
   --secondary: #1949cd;
-  --selection: #ffff75b8;
+  --selection: #FFEC8F;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+  font-size: 18px;
 }
 
-h1, h3, h3, h4, h5, h6 {
-  font-weight: 700;
+p {
+  margin-bottom: 1.25rem;
 }
+
 h1 {
   font-size: 2.25rem;
 }
 h2 {
   font-size: 1.5rem;
 }
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1rem;
+}
+h6 {
+  font-size: 1rem;
+}
 
 ::selection {
-  background-color: #AACCF2;
+  background-color: var(--selection);
 }
 
 @media (prefers-color-scheme: dark) {

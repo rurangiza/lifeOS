@@ -11,16 +11,17 @@ import Canvas from "@/app/components/Canvas/Canvas"
 import Button from "@/app/components/Button/Button"
 import ColorPalette from "@/app/components/ColorPalette/ColorPalette"
 
-## Components / Design System
+# Design System
 
-### Logo
+## Logo
 
 <img src="/logo.png"/>
 
-### Colors
+## Colors
+
 Brand
 
-<ColorPalette colors={["493D9E", "B2A5FF", "DAD2FF"]}/>
+<ColorPalette colors={["4242f9", "FFEC8F"]}/>
 
 Background
 
@@ -30,12 +31,12 @@ Foreground (typeface)
 <ColorPalette colors={["383838"]}/>
 
 
-### Typography
+## Typography
 
-Display
+H1
 # I've looked at clouds from both sides now
 
-H2 (Title)
+H2
 ## I've looked at clouds from both sides now
 
 H3
@@ -47,32 +48,32 @@ H4
 H5
 ##### I've looked at clouds from both sides now
 
-H6 (Label)
-##### I've looked at clouds from both sides now
+H6
+###### I've looked at clouds from both sides now
 
 Body
 
-I've looked at clouds from both sides now
+What are mind maps?
 
-Strong
+A **mind map** is a [diagram](https://en.wikipedia.org/wiki/Diagram) used to visually organize information into a [hierarchy](https://en.wikipedia.org/wiki/Hierarchy), showing relationships among pieces of the whole.[1] It is often based on a single concept, drawn as an image in the center of a blank page, to which associated representations of ideas such as images, words and parts of words are added. Major ideas are connected directly to the central concept, and other ideas [branch out](https://en.wikipedia.org/wiki/Tree_structure) from those major ideas.
 
-Là, tout n’est qu’**ordre et beauté**. Luxe, calme et volupté.
-
-Emphesis
-
-Là, tout n’est qu’*ordre et beauté*. Luxe, calme et volupté.
+Mind maps can also be drawn by hand, either as "*notes*" during a lecture, meeting or planning session, for example, or as higher quality pictures when more time is available. Mind maps are considered to be a type of spider diagram.[2]
 
 ## Links
 
-[my website](https://rurangiza.com)
+Three types of inline links: [Internal link](/), [anchor link](#how-they-work) and [external links](https://www.wikipedia.org/)
 
+### Buttons
 
-### Lists
+<Button>Click here</Button>
 
+## Lists
+Unordered List
 - First
 - Second
 - Third
 
+Ordered List
 1. First
 2. Second
 3. Third
@@ -80,10 +81,6 @@ Là, tout n’est qu’*ordre et beauté*. Luxe, calme et volupté.
 ### Horizontal bar
 
 ---
-
-### Buttons
-
-<Button>Click here</Button>
 
 ### Quote
 
@@ -105,7 +102,7 @@ Inline code
 
 Code-block (basic)
 
-```py showLineNumbers
+```py
 import DeepThought from 'deepthought';
 const dp = new DeepThought();
 
@@ -145,16 +142,13 @@ const completion = await dp.chat.completion.create({
 
 ### Canvas
 <Canvas>
-  <span> .</span>
-  <h2>This is the canvas</h2>
-  <span> .</span>
+  This is a canvas
 </Canvas>
 
-### Canvas with title
+With title
+
 <Canvas title="An amazing title">
-  <span> .</span>
-  <h2>This is the canvas</h2>
-  <span> .</span>
+  This is a canvas with a title
 </Canvas>
 
 

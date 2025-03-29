@@ -39,10 +39,12 @@ export function Callout({ children, mode }: CalloutProps) {
         style={{
           backgroundColor: color.second,
           borderColor: color.main,
+          borderRadius: "10px",
+          boxShadow: "inset 0 0 0 2px #000",
         }}
-        className="border-2 py-2 px-8 rounded-sm relative mt-8 mb-8"
+        className="border-l-4 py-2 px-8 rounded-sm relative rounded-tl-2xl mt-8 mb-10"
       >
-        <div
+        {/* <div
           style={{
             width: "40px",
             height: "40px",
@@ -59,7 +61,7 @@ export function Callout({ children, mode }: CalloutProps) {
           ) : (
             <LuOctagonAlert color="white" />
           )}
-        </div>
+        </div> */}
         <p className="text-lg font-normal leading-snug mb-2 mt-4">{children}</p>
       </div>
     </>

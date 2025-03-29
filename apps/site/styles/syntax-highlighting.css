@@ -12,8 +12,9 @@ figure[data-rehype-pretty-code-figure] pre code {
   /* display: grid; */
   overflow-x: auto;
 
-  background-color: white;
-  line-height: 1.4rem;
+  background-color: #F7F7F8;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
   border-radius: 0px;
   padding: 1rem 0px;
 }
@@ -27,11 +28,12 @@ figure[data-rehype-pretty-code-figure] [data-rehype-pretty-code-title]  {
 
 /* LINES + HIGHLIGHTED LINES */
 figure[data-rehype-pretty-code-figure] [data-line] {
-  padding-left: 1rem;
+  padding-left: 16px;
 }
 
 figure[data-rehype-pretty-code-figure] [data-highlighted-line] {
-  border-left: solid 2px #1F6FFA;
+  padding-left: 13px;
+  border-left: solid 3px #1F6FFA;
   background-color: #1f6ffa36;
 }
 

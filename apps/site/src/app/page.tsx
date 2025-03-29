@@ -1,11 +1,10 @@
-
 export default function Home() {
   return (
     <div>
-      <h1 className="mb-8 text-2xl font-black">
-        Hi, I'm Arsène. I'm a software engineer interrested in building
-        agents and better UX for them.
-      </h1>
+      <p>
+        Hi, I'm Arsène. I'm a software engineer interrested in <a className="text-blue-500 hover:text-blue-700" href="https://maggieappleton.com/tools-for-thought/">tools for thoughts</a>.
+        Currently I'm building <a className="text-blue-500 hover:text-blue-700" href="https://github.com/rurangiza/reader">Reader</a> which is an app for active reading and I'm learning + <a className="text-blue-500 hover:text-blue-700" href="/notes/">writing</a> about LLMs and user interfaces.
+      </p>
     </div>
   );
 }

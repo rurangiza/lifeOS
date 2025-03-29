@@ -3,7 +3,7 @@ import { type Options } from "rehype-pretty-code"
  
 export const rehypePrettyCodeOptions: Partial<Options> = {
   // prepackaged theme: https://shiki.style/themes#themes
-  theme: "material-theme-lighter",
+  theme: "min-light",
   // or import a custom theme
   // theme: JSON.parse(vercelLightTheme),
 }
