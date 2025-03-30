@@ -1,48 +1,9 @@
-import Link from "next/link";
-import { compareDesc, format, parseISO } from "date-fns";
-import { allPosts, Post } from "contentlayer/generated";
+import Articles from "@/app/components/Articles/Articles";
 
-interface Note {
-  title: string;
-  date: string;
-}
-function PostCard(post: Post) {
-  const markup = { __html: (post.body as any).html || "" };
+export default function Notes() {
   return (
-    <div className="mb-8">
-      <h4>
-        <Link
-          href={post.url}
-          className="text-blue-700 hover:text-blue-900 dark:text-blue-400"
-        >
-          {post.title}
-        </Link>
-      </h4>
-      <time dateTime={post.date} className="mb-2 block text-xs text-gray-600">
-        {format(parseISO(post.date), "LLLL d, yyyy")}
-      </time>
-      <div
-        className="text-sm [&>*]:mb-3 [&>*:last-child]:mb-0"
-        dangerouslySetInnerHTML={markup}
-      />
-    </div>
-  );
-}
-
-export default function Home() {
-  const posts = allPosts.sort((a: Note, b: Note) =>
-    compareDesc(new Date(a.date), new Date(b.date))
-  );
-
-  return (
-    <div>
-      {posts.filter((post, idx) => {
-        if (post.published) {
-          return post
-        }
-      }).map((post, idx) => (
-        <PostCard key={idx} {...post} />
-      ))}
-    </div>
-  );
+    <>
+      <Articles />
+    </>
+  )
 }

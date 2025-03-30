@@ -1,6 +1,6 @@
 ---
 title: Design System
-date: 2024-03-25
+date: 2025-03-25
 published: true
 ---
 
@@ -11,13 +11,15 @@ import Canvas from "@/app/components/Canvas/Canvas"
 import Button from "@/app/components/Button/Button"
 import ColorPalette from "@/app/components/ColorPalette/ColorPalette"
 
+<GoHome/>
+
 # Design System
 
-### Logo
+## Logo
 
 <img src="/logo.png"/>
 
-### Colors
+## Colors
 
 Brand
 
@@ -32,7 +34,7 @@ Foreground (typeface)
 
 ---
 
-### Typography
+## Typography
 
 H1
 # I've looked at clouds from both sides now
@@ -43,20 +45,21 @@ H2
 H3
 ### I've looked at clouds from both sides now. From up and down and still somehow
 
+H4 
+#### I've looked at clouds from both sides now. From up and down and still somehow
+
 Label
 
 #### Marker
-
-
 
 
 Body
 
 abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcd
 
-A **mind map** is a [diagram](https://en.wikipedia.org/wiki/Diagram) used to visually organize information into a [hierarchy](https://en.wikipedia.org/wiki/Hierarchy), showing relationships among pieces of the whole.[1] It is often based on a single concept, drawn as an image in the center of a blank page, to which associated representations of ideas such as images, words and parts of words are added. Major ideas are connected directly to the central concept, and other ideas [branch out](https://en.wikipedia.org/wiki/Tree_structure) from those major ideas.
+A **mind map** is a [diagram](https://en.wikipedia.org/wiki/Diagram) used to visually organize information into a [hierarchy](https://en.wikipedia.org/wiki/Hierarchy), showing relationships among pieces of the whole. It is often based on a single concept, drawn as an image in the center of a blank page, to which associated representations of ideas such as images, words and parts of words are added. Major ideas are connected directly to the central concept, and other ideas [branch out](https://en.wikipedia.org/wiki/Tree_structure) from those major ideas.
 
-Mind maps can also be drawn by hand, either as "*notes*" during a lecture, meeting or planning session, for example, or as higher quality pictures when more time is available. Mind maps are considered to be a type of spider diagram.[2]
+Mind maps can also be drawn by hand, either as “*notes*” during a lecture, meeting or planning session, for example, or as higher quality pictures when more time is available. Mind maps are considered to be a type of spider diagram.
 
 ---
 
@@ -64,17 +67,23 @@ Mind maps can also be drawn by hand, either as "*notes*" during a lecture, meeti
 
 ## The art of organizing ideas
 
-A **mind map** is a [diagram](https://en.wikipedia.org/wiki/Diagram) used to visually organize information into a [hierarchy](https://en.wikipedia.org/wiki/Hierarchy), showing relationships among pieces of the whole.[1]
+### Introduction
+
+A **mind map** is a [diagram](https://en.wikipedia.org/wiki/Diagram) used to visually organize information into a [hierarchy](https://en.wikipedia.org/wiki/Hierarchy), showing relationships among pieces of the whole.[^1]
 
 It is often based on a single concept, drawn as an image in the center of a blank page, to which associated representations of ideas such as images, words and parts of words are added. Major ideas are connected directly to the central concept, and other ideas [branch out](https://en.wikipedia.org/wiki/Tree_structure) from those major ideas.
 
-Mind maps can also be drawn by hand, either as "notes" during a lecture, meeting or planning session, for example, or as higher quality pictures when more time is available.
+Mind maps can also be drawn by hand, either as “notes” during a lecture, meeting or planning session, for example, or as higher quality pictures when more time is available.
 
-Mind maps are considered to be a type of [spider diagram](https://en.wikipedia.org/wiki/Concept_map).[2]
+Mind maps are considered to be a type of [spider diagram](https://en.wikipedia.org/wiki/Concept_map).[^2]
+
+[^1]:  This is the first footnote
+
+[^2]:  This is the second footnote
 
 ### Origin
 
-Although the term "mind map" was first popularized by British popular psychology author and television personality Tony Buzan,[3][4] the use of diagrams that visually "map" information using branching and radial maps traces back centuries.[5]
+Although the term “mind map” was first popularized by British popular psychology author and television personality Tony Buzan,[3][4] the use of diagrams that visually “map” information using branching and radial maps traces back centuries.[5]
 
 These pictorial methods record knowledge and model systems, and have a long history in learning, brainstorming, memory, visual thinking, and problem solving by educators, engineers, psychologists, and others.
 
@@ -82,15 +91,17 @@ Some of the earliest examples of such graphical records were developed by Porphy
 
 ---
 
-### Links
+## Links
 
 Three types of inline links: [Internal link](/), [anchor link](#how-they-work) and [external links](https://www.wikipedia.org/)
 
-### Buttons
+## Buttons
+
+Adding some text here because buttons will never be directly underneath a header.
 
 <Button>Click here</Button>
 
-### Lists
+## Lists
 Unordered List
 - First
 - Second
@@ -101,15 +112,15 @@ Ordered List
 2. Second
 3. Third
 
-### Horizontal bar
+## Horizontal bar
 
 ---
 
-### Quote
+## Quote
 
 > I've looked at clouds from both sides now
 
-### Callout
+## Callout
 
 <Callout mode="info">Highlights information that users should take into account, even when skimming.</Callout>
 
@@ -158,7 +169,7 @@ const completion = await dp.chat.completion.create({
 });
 ```
 
-### Image
+## Image
 
 ![This is a wabi sabi image](/images/wabisabi.jpeg)
 
@@ -173,3 +184,4 @@ With title
 <Canvas title="An amazing title">
   This is a canvas with a title
 </Canvas>
+

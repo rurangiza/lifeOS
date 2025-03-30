@@ -26,10 +26,8 @@ export default function RootLayout({
       <body className="my-8">
         <div className="min-h-screen flex flex-col justify-between pt-0 md:pt-8 p-8">
           <main className="max-w-[56ch] mx-auto w-full space-y-4">
-            <Navbar></Navbar>
             {children}
           </main>
-          <Footer />
         </div>
       </body>
     </html>
