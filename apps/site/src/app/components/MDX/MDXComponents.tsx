@@ -23,7 +23,7 @@ export const mdxComponents: MDXComponents = {
     <h5 {...props} className="text-sm text-gray-400 mt-0 mb-4"></h5>
   ),
   h6: (props: HeadingProps) => (
-    <h6 {...props} className="inline-block border- px-4 py-1 text-sm rounded-full mt-4 mb-4 bg-gray-200"></h6>
+    <h6 {...props} className="inline-block border- px-4 py-1 text-sm rounded-full mt-0 mb-4 bg-gray-200"></h6>
   ),
   p: (props: ParagraphProps) => (
     <p className=" text-gray-800" {...props} />

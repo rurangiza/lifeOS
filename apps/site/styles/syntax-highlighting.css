@@ -18,9 +18,8 @@ figure[data-rehype-pretty-code-figure] pre code {
   font-size: 0.8rem;
   line-height: 1.2rem;
   border-radius: 0px;
-  padding: 1rem 0px;
+  padding: 1rem 0;
   font-size: 14px;
-  margin-bottom: 40px;
 }
 
 /* TITLE */
