@@ -1,15 +1,17 @@
+
+
 /* WRAPPER */
 figure[data-rehype-pretty-code-figure] {
   overflow: hidden;
- 
+
   background-color: #FAFAFA;
   border-radius: 0.5rem;
   border: solid 1px #EDEDED;
+  margin-bottom: 20px;
 }
 
 /* CODE BLOCK */
 figure[data-rehype-pretty-code-figure] pre code {
-  /* display: grid; */
   overflow-x: auto;
 
   background-color: #F7F7F8;
@@ -17,6 +19,8 @@ figure[data-rehype-pretty-code-figure] pre code {
   line-height: 1.2rem;
   border-radius: 0px;
   padding: 1rem 0px;
+  font-size: 14px;
+  margin-bottom: 40px;
 }
 
 /* TITLE */

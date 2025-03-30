@@ -7,7 +7,7 @@ import type { MDXComponents } from "mdx/types";
 import CodeSnippet from "@/app/components/CodeSnippet/CodeSnippet";
 import Canvas from "@/app/components/Canvas/Canvas";
 import { Callout } from "@/app/components/Callout/Callout";
-import { P } from "ts-pattern";
+import GoHome from "@/app/components/GoHome/GoHome";
 
 type HeadingProps = ComponentPropsWithoutRef<"h1">;
 type ParagraphProps = ComponentPropsWithoutRef<"p">;
@@ -19,32 +19,20 @@ type ImageProps = ComponentPropsWithoutRef<"img">;
 type HighlightProps = ComponentPropsWithoutRef<"mark">;
 
 export const mdxComponents: MDXComponents = {
-  h1: (props: HeadingProps) => (
-    <h1 {...props} className="text-8xl font-bold bg-grape mb-8 mt-4"></h1>
-  ),
-  h2: (props: HeadingProps) => (
-    <h2 {...props} className="text-4xl font-[500] mb-2 mt-4"></h2>
-  ),
-  h3: (props: HeadingProps) => (
-    <h3 {...props} className="text-4xl font-[500] mb-4 mt-8"></h3>
-  ),
-  h4: (props: HeadingProps) => (
-    <h4 {...props} className="text-lg font-medium mb-0 mt-2"></h4>
-  ),
   h5: (props: HeadingProps) => (
-    <h5 {...props} className="text-sm font-medium mb-4 mt-2"></h5>
+    <h5 {...props} className="text-sm text-gray-400 mt-0 mb-4"></h5>
   ),
   h6: (props: HeadingProps) => (
-    <h6 {...props} className="text-xs font-normal text-gray-500 mb-4"></h6>
+    <h6 {...props} className="inline-block border- px-4 py-1 text-sm rounded-full mt-4 mb-4 bg-gray-200"></h6>
   ),
   p: (props: ParagraphProps) => (
-    <p className=" text-gray-800 leading-snug mb-2 mt-4" {...props} />
+    <p className=" text-gray-800" {...props} />
   ),
   ol: (props: ListProps) => (
-    <ol className="text-gray-800 list-decimal pl-5 space-y-2 marker:text-[#4242f9]" {...props} />
+    <ol className="text-gray-800 list-decimal pl-5 space-y-1 mb-4 marker:text-[#4242f9]" {...props} />
   ),
   ul: (props: ListProps) => (
-    <ul className="text-gray-800 list-disc pl-5 space-y-1 marker:text-[#4242f9]" {...props} />
+    <ul className="text-gray-800 list-disc pl-5 space-y-1 mb-4 marker:text-[#4242f9]" {...props} />
   ),
   li: (props: ListItemProps) => <li className="pl-1" {...props} />,
   em: (props: ComponentPropsWithoutRef<"em">) => (
@@ -94,10 +82,10 @@ export const mdxComponents: MDXComponents = {
       {children}
     </CodeSnippet>
   ),
-  blockquote: (props: BlockquoteProps) => (
+  blockquote: ({...props}) => (
     <blockquote
-      className="text-center text-2xl font-[500] italic ml-[0.075em] text-red-600"
       {...props}
+      className="text-center text-2xl font-[500] italic ml-[0.075em] text-red-600"
     />
   ),
   img: (props: ImageProps) => <Image {...props} />,
@@ -110,5 +98,5 @@ export const mdxComponents: MDXComponents = {
   ),
   Canvas: (props) => <Canvas {...props}></Canvas>,
   Callout: ({ children, mode }) => <Callout mode={mode}>{children}</Callout>,
-  // Label: ({children}) => <span className="border bg-gray-200 px-4 py-2 mb-20">{children}</span>
+  GoHome: () => <GoHome/>
 };

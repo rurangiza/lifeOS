@@ -6,7 +6,7 @@ export default function ColorPalette({colors}: ColorPaletteProps) {
   // grid grid-cols-4 grid-rows-3 gap-0 -m-4
   return (
     <>
-      <div>
+      <div className="mb-4">
         {colors.map((color, index) => (
           <div
             key={`${index}-${color}`}

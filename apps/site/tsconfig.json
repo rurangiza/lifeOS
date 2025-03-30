@@ -27,7 +27,8 @@
       "contentlayer/generated": ["./.contentlayer/generated"],
       "@/*": [
         "./src/*"
-      ]
+      ],
+      "@/fonts": ["./styles/fonts"]
     }
   },
   "include": [

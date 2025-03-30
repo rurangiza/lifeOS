@@ -15,7 +15,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="flex space-x-4 mt-8 mb-8">
+    <nav className="flex space-x-4 mt-8 pb-4 mb-2">
       {navLinks.map((link) => {
         const isActive = pathname === link.href;
         return (

@@ -14,14 +14,16 @@ export default function Canvas({
   title,
 }: CanvasProps) {
   return (
-    <>
+    <div className="mt-6 mb-8">
       {title && (
         <div className="text-sm bg-[#F7F7F8] rounded-t-md border-[0.2px] border-b-0 border-[#EDEDED] px-8 py-4">
           {title}
         </div>
       )}
       <div
-        className={`border-[0.3px] border-gray-200 ${title ? "rounded-b-lg" : "rounded-lg"} py-4 px-8 overflow-hidden mt-0 
+        className={`border-[0.3px] border-gray-200 ${
+          title ? "rounded-b-lg" : "rounded-lg"
+        } py-4 px-8 overflow-hidden mt-0 
                     bg-white bg-[linear-gradient(90deg,transparent_1px,#fff_0),linear-gradient(transparent_1px,#fff_0)] 
                     bg-[size:22px_22px] [background-position:center_center]`}
       >
@@ -29,6 +31,6 @@ export default function Canvas({
           {children}
         </div>
       </div>
-    </>
+    </div>
   );
 }
