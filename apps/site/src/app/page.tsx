@@ -1,10 +1,13 @@
 export default function Home() {
   return (
-    <div>
+    <div className="flex">
+      <img src="/images/anime_photo.png" alt="" className="w-[120px] h-[120px] mr-8 border-6"/>
+      <div>
+      <h2 style={{marginBottom: "0px"}}>Arsène Rurangiza</h2>
       <p>
-        Hi, I'm Arsène. I'm a software engineer interrested in <a className="text-blue-500 hover:text-blue-700" href="https://maggieappleton.com/tools-for-thought/">tools for thoughts</a>.
-        Currently I'm building <a className="text-blue-500 hover:text-blue-700" href="https://github.com/rurangiza/reader">Reader</a> which is an app for active reading and I'm learning + <a className="text-blue-500 hover:text-blue-700" href="/notes/">writing</a> about LLMs and user interfaces.
+        I'm a software developer focused on building AI systems for the web. I'm also a heavy note taker and wanna reader.
       </p>
+      </div>
     </div>
   );
 }

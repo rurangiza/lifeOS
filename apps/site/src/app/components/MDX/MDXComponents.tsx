@@ -20,25 +20,25 @@ type HighlightProps = ComponentPropsWithoutRef<"mark">;
 
 export const mdxComponents: MDXComponents = {
   h1: (props: HeadingProps) => (
-    <h1 {...props} className="text-8xl font-bold bg-grape mb-8 mt-4"></h1>
+    <h1 {...props} className=""></h1>
   ),
   h2: (props: HeadingProps) => (
-    <h2 {...props} className="text-4xl font-[500] mb-2 mt-4"></h2>
+    <h2 {...props} className=""></h2>
   ),
   h3: (props: HeadingProps) => (
-    <h3 {...props} className="text-4xl font-[500] mb-4 mt-8"></h3>
+    <h3 {...props} className=""></h3>
   ),
   h4: (props: HeadingProps) => (
-    <h4 {...props} className="text-lg font-medium mb-0 mt-2"></h4>
+    <h4 {...props} className="inline-block border- px-4 py-1 text-sm rounded-full mb-2 bg-gray-200"></h4>
   ),
   h5: (props: HeadingProps) => (
-    <h5 {...props} className="text-sm font-medium mb-4 mt-2"></h5>
+    <h5 {...props} className=""></h5>
   ),
   h6: (props: HeadingProps) => (
-    <h6 {...props} className="text-xs font-normal text-gray-500 mb-4"></h6>
+    <h6 {...props} className="text-gray-500"></h6>
   ),
   p: (props: ParagraphProps) => (
-    <p className=" text-gray-800 leading-snug mb-2 mt-4" {...props} />
+    <p className=" text-gray-800" {...props} />
   ),
   ol: (props: ListProps) => (
     <ol className="text-gray-800 list-decimal pl-5 space-y-2 marker:text-[#4242f9]" {...props} />

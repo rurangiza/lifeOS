@@ -13,11 +13,11 @@ import ColorPalette from "@/app/components/ColorPalette/ColorPalette"
 
 # Design System
 
-## Logo
+### Logo
 
 <img src="/logo.png"/>
 
-## Colors
+### Colors
 
 Brand
 
@@ -30,36 +30,59 @@ Background
 Foreground (typeface)
 <ColorPalette colors={["383838"]}/>
 
+---
 
-## Typography
+### Typography
 
 H1
 # I've looked at clouds from both sides now
 
 H2
-## I've looked at clouds from both sides now
+## I've looked at clouds from both sides now. From up and down and still somehow
 
 H3
-### I've looked at clouds from both sides now
+### I've looked at clouds from both sides now. From up and down and still somehow
 
-H4
-#### I've looked at clouds from both sides now
+Label
 
-H5
-##### I've looked at clouds from both sides now
+#### Marker
 
-H6
-###### I've looked at clouds from both sides now
+
+
 
 Body
 
-What are mind maps?
+abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcd
 
 A **mind map** is a [diagram](https://en.wikipedia.org/wiki/Diagram) used to visually organize information into a [hierarchy](https://en.wikipedia.org/wiki/Hierarchy), showing relationships among pieces of the whole.[1] It is often based on a single concept, drawn as an image in the center of a blank page, to which associated representations of ideas such as images, words and parts of words are added. Major ideas are connected directly to the central concept, and other ideas [branch out](https://en.wikipedia.org/wiki/Tree_structure) from those major ideas.
 
 Mind maps can also be drawn by hand, either as "*notes*" during a lecture, meeting or planning session, for example, or as higher quality pictures when more time is available. Mind maps are considered to be a type of spider diagram.[2]
 
-## Links
+---
+
+# Mind Maps
+
+## The art of organizing ideas
+
+A **mind map** is a [diagram](https://en.wikipedia.org/wiki/Diagram) used to visually organize information into a [hierarchy](https://en.wikipedia.org/wiki/Hierarchy), showing relationships among pieces of the whole.[1]
+
+It is often based on a single concept, drawn as an image in the center of a blank page, to which associated representations of ideas such as images, words and parts of words are added. Major ideas are connected directly to the central concept, and other ideas [branch out](https://en.wikipedia.org/wiki/Tree_structure) from those major ideas.
+
+Mind maps can also be drawn by hand, either as "notes" during a lecture, meeting or planning session, for example, or as higher quality pictures when more time is available.
+
+Mind maps are considered to be a type of [spider diagram](https://en.wikipedia.org/wiki/Concept_map).[2]
+
+### Origin
+
+Although the term "mind map" was first popularized by British popular psychology author and television personality Tony Buzan,[3][4] the use of diagrams that visually "map" information using branching and radial maps traces back centuries.[5]
+
+These pictorial methods record knowledge and model systems, and have a long history in learning, brainstorming, memory, visual thinking, and problem solving by educators, engineers, psychologists, and others.
+
+Some of the earliest examples of such graphical records were developed by Porphyry of Tyros, a noted thinker of the 3rd century, as he graphically visualized the concept categories of Aristotle.[5] Philosopher Ramon Llull (1235–1315) also used such techniques.[5]
+
+---
+
+### Links
 
 Three types of inline links: [Internal link](/), [anchor link](#how-they-work) and [external links](https://www.wikipedia.org/)
 
@@ -67,7 +90,7 @@ Three types of inline links: [Internal link](/), [anchor link](#how-they-work) a
 
 <Button>Click here</Button>
 
-## Lists
+### Lists
 Unordered List
 - First
 - Second
@@ -150,63 +173,3 @@ With title
 <Canvas title="An amazing title">
   This is a canvas with a title
 </Canvas>
-
-
----
-
-## Understanding Message Queues
-A message queue is a communication mechanism used in distributed systems to enable asynchronous message passing between different components, services, or applications. It acts as a temporary storage where messages are kept until they are processed by the receiving system.
-
-### Key Concepts:
-
-- **Producer**: The sender of messages.
-- **Consumer**: The receiver of messages.
-- **Queue/Topic**: Storage where messages are held until processed.
-- **Routing**: The process of directing messages from producers to appropriate consumers.
-
-### How they work
-A message queue follows a producer-consumer model, where:
-
-- **Producers** create and send messages to the queue.
-- The queue holds messages in a First-In, First-Out (FIFO) order (though some queues allow different processing strategies).
-- **Consumers** retrieve and process messages from the queue.
-- Once a message is processed, it is removed from the queue.
-
-Message queues ensure that messages are not lost if a consumer is temporarily unavailable. They also enable load balancing, as multiple consumers can process messages concurrently from the same queue.
-
-#### In code
-
-```py title="Send SQS Message" showLineNumbers {16}
-def send_message(queue, message_body, message_attributes=None):
-    """
-    Send a message to an Amazon SQS queue.
-
-    :param queue: The queue that receives the message.
-    :param message_body: The body text of the message.
-    :param message_attributes: Custom attributes of the message. These are key-value
-                               pairs that can be whatever you want.
-    :return: The response from SQS that contains the assigned message ID.
-    """
-    -> 
-    if not message_attributes:
-        message_attributes = {}
-
-    try:
-        response = queue.send_message(
-            MessageBody=message_body,
-            MessageAttributes=message_attributes
-        )
-    except ClientError as error:
-        logger.exception("Send message failed: %s", message_body)
-        raise error
-    else:
-        return response
-```
-
-### Examples of Message Brokers
-- **Amazon SQS (Simple Queue Service)** – A managed queue service on AWS.
-- **RabbitMQ (using queue mode)** – An open-source message broker that supports queues.
-- **Apache ActiveMQ** – A widely used open-source message queuing system.
-- **Redis (when used as a queue)** – A fast, in-memory data store that can be used as a message queue.
-
-[^1]: [Wikipedia](https://en.wikipedia.org/wiki/Message_broker): Message broker

@@ -1,9 +1,5 @@
 import React, { ComponentPropsWithoutRef } from "react";
-import { Fira_Code } from "next/font/google";
-
-export const fira_code = Fira_Code({
-  subsets: ["latin"],
-});
+import { fira_code } from "styles/fonts";
 
 export default function CodeSnippet({
   children,
@@ -13,17 +9,16 @@ export default function CodeSnippet({
   // Inline code block
   if (!className?.includes("language-")) {
     return (
-      <code className="text-sm text-red-500 bg-[#EBEAEB] px-1.5 rounded-sm p-0.5" {...props}>
+      <code
+        style={fira_code.style}
+        className=" text-red-500 bg-[#EBEAEB] px-2 rounded-sm py-0.5 text-[16px]"
+        {...props}
+      >
         {children}
       </code>
     );
   }
 
   const lang: string | undefined = className.replace("language-", "");
-  return (
-    <div>
-      {/* add syntax highlighter here */}
-      {children as string}
-    </div>
-  );
+  return <div>{children as string}</div>;
 }

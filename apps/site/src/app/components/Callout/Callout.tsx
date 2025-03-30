@@ -62,7 +62,7 @@ export function Callout({ children, mode }: CalloutProps) {
             <LuOctagonAlert color="white" />
           )}
         </div> */}
-        <p className="text-lg font-normal leading-snug mb-2 mt-4">{children}</p>
+        <p className="m-0">{children}</p>
       </div>
     </>
   );
