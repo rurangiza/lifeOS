@@ -20,19 +20,26 @@ type HighlightProps = ComponentPropsWithoutRef<"mark">;
 
 export const mdxComponents: MDXComponents = {
   h5: (props: HeadingProps) => (
-    <h5 {...props} className="text-sm text-gray-400 mt-0 mb-4"></h5>
+    <h5 {...props} className="text-sm text-gray-400 -mt-1"></h5>
   ),
   h6: (props: HeadingProps) => (
-    <h6 {...props} className="inline-block border- px-4 py-1 text-sm rounded-full mt-0 mb-4 bg-gray-200"></h6>
+    <h6
+      {...props}
+      className="inline-block border- px-4 py-1 text-sm rounded-full mt-0 bg-gray-200"
+    ></h6>
   ),
-  p: (props: ParagraphProps) => (
-    <p className=" text-gray-800" {...props} />
-  ),
+  p: (props: ParagraphProps) => <p className=" text-gray-800" {...props} />,
   ol: (props: ListProps) => (
-    <ol className="text-gray-800 list-decimal pl-5 space-y-1 mb-4 marker:text-[#4242f9]" {...props} />
+    <ol
+      className="text-gray-800 list-decimal pl-5 space-y-1 mb-4 marker:text-[#4242f9]"
+      {...props}
+    />
   ),
   ul: (props: ListProps) => (
-    <ul className="text-gray-800 list-disc pl-5 space-y-1 mb-4 marker:text-[#4242f9]" {...props} />
+    <ul
+      className="text-gray-800 list-disc pl-5 space-y-1 mb-4 marker:text-[#4242f9]"
+      {...props}
+    />
   ),
   li: (props: ListItemProps) => <li className="pl-1" {...props} />,
   em: (props: ComponentPropsWithoutRef<"em">) => (
@@ -82,7 +89,7 @@ export const mdxComponents: MDXComponents = {
       {children}
     </CodeSnippet>
   ),
-  blockquote: ({...props}) => (
+  blockquote: ({ ...props }) => (
     <blockquote
       {...props}
       className="text-center text-2xl font-[500] italic ml-[0.075em] text-red-600"
@@ -98,5 +105,8 @@ export const mdxComponents: MDXComponents = {
   ),
   Canvas: (props) => <Canvas {...props}></Canvas>,
   Callout: ({ children, mode }) => <Callout mode={mode}>{children}</Callout>,
-  GoHome: () => <GoHome/>
+  GoHome: () => <GoHome />,
+  Space: ({ top, bottom }) => (
+    <span style={{ marginTop: top, marginBottom: bottom }}></span>
+  ),
 };
