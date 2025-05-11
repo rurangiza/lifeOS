@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en" className={wotfard.className}>
       <body className="my-8">
         <div className="min-h-screen flex flex-col justify-between pt-0 md:pt-8 p-8">
-          <main className="max-w-[56ch] mx-auto w-full space-y-4">
+          <main className="max-w-[680px] mx-auto w-full space-y-4">
             {children}
           </main>
         </div>
