@@ -1,0 +1,100 @@
+@import 'tailwindcss';
+@import "../../styles/syntax-highlighting.css";
+
+:root {
+  --background: #FFFFFF;
+  --foreground-header: hsl(220, 23%, 5%);
+  /* --foreground: hsl(210, 23%, 5%); */
+  /* --foreground-text: hsla(210, 23%, 5%, 0.816); */
+  --foreground-text: #383a3c;
+  --extra: #ff0000;
+  --clr-grey: --color-gray-950;
+  --primary: #4242f9;
+  --secondary: #1949cd;
+  --selection: #FFEC8F;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-size: 20px;
+  font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 
+Guidelines: https://practicaltypography.com/summary-of-key-rules.html
+*/
+
+p {
+  line-height: 1.5;
+  font-weight: 400;
+  hyphens: auto;
+  letter-spacing: -0.4px;
+
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+
+  color: var(--foreground-text);
+}
+
+h1, h2, h3, h4 {
+  color: var(--foreground-header)
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.3em;
+
+  margin-top: 0.8em;
+  margin-bottom: 0.4em;
+}
+h2 {
+  font-size: 1.4em;
+  font-weight: 600;
+  line-height: 1.3em;
+
+  margin-top: 0.8em;
+  margin-bottom: 0.4em;
+}
+h3 {
+  font-size: 1.4em;
+  font-weight: 600;
+  line-height: 1.3em;
+
+  margin-top: 1.2em;
+  margin-bottom: 0.4em;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.3em;
+
+  margin-top: 0.8em;
+  margin-bottom: 0.6em;
+}
+
+small {
+  font-size: 0.8rem;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+::selection {
+  background-color: var(--selection);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+
+  }
+}

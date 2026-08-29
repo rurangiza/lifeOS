@@ -1,0 +1,195 @@
+---
+title: Design System
+date: 2025-03-25
+published: true
+---
+
+import Image from 'next/image'
+
+import Subtitle from '@/app/components/Subtitle/Subtitle'
+import Canvas from "@/app/components/Canvas/Canvas"
+import Button from "@/app/components/Button/Button"
+import ColorPalette from "@/app/components/ColorPalette/ColorPalette"
+
+<GoHome/>
+
+# Design System
+
+<Space top="20px" bottom="10px"/>
+
+### Colors
+
+Brand
+
+<ColorPalette colors={["4242f9", "FFEC8F"]}/>
+
+Background
+
+<ColorPalette colors={["FFFFFF", "FAFAFA", "EBEAEB", "797979"]}/>
+
+Foreground (typeface)
+<ColorPalette colors={["383838"]}/>
+
+---
+
+### Typography
+
+I use two main fonts:
+- [Wotfard](https://www.atipofoundry.com/fonts/wotfard): for my headers and paragraphs
+- [Fira Code](https://fonts.google.com/specimen/Fira+Code): for my code blocks
+
+##### H1 (title)
+# I've looked at clouds from both sides now
+
+##### H2 (sub-title)
+## I've looked at clouds from both sides now. From up and down and still somehow
+
+##### H3 (section)
+### I've looked at clouds from both sides now. From up and down and still somehow
+
+##### H4 (sub-section)
+#### I've looked at clouds from both sides now. From up and down and still somehow
+
+##### H5 (detail)
+
+##### I've looked at clouds from both sides now. From up and down and still somehow
+
+##### H6 (label)
+
+###### Marker
+
+
+Body
+
+I've looked at clouds from both sides now. From up and down and still somehow
+
+---
+
+# Mind Maps
+
+## The art of organizing ideas
+
+### Introduction
+
+A **mind map** is a [diagram](https://en.wikipedia.org/wiki/Diagram) used to visually organize information into a [hierarchy](https://en.wikipedia.org/wiki/Hierarchy), showing relationships among pieces of the whole.[^1]
+
+It is often based on a single concept, drawn as an image in the center of a blank page, to which associated representations of ideas such as images, words and parts of words are added. Major ideas are connected directly to the central concept, and other ideas [branch out](https://en.wikipedia.org/wiki/Tree_structure) from those major ideas.
+
+Mind maps can also be drawn by hand, either as “notes” during a lecture, meeting or planning session, for example, or as higher quality pictures when more time is available.
+
+Mind maps are considered to be a type of [spider diagram](https://en.wikipedia.org/wiki/Concept_map).[^2]
+
+[^1]:  This is the first footnote
+
+[^2]:  This is the second footnote
+
+### Origin
+
+Although the term “mind map” was first popularized by British popular psychology author and television personality Tony Buzan, the use of diagrams that visually “map” information using branching and radial maps traces back centuries.
+
+These pictorial methods record knowledge and model systems, and have a long history in learning, brainstorming, memory, visual thinking, and problem solving by educators, engineers, psychologists, and others.
+
+Some of the earliest examples of such graphical records were developed by Porphyry of Tyros, a noted thinker of the 3rd century, as he graphically visualized the concept categories of Aristotle. Philosopher Ramon Llull (1235–1315) also used such techniques.
+
+---
+
+### Links
+
+Three types of inline links: [Internal link](/), [anchor link](#how-they-work) and [external links](https://www.wikipedia.org/)
+
+### Buttons
+
+Adding some text here because buttons will never be directly underneath a header.
+
+<Button>Click here</Button>
+
+### Lists
+Unordered List
+- First
+- Second
+- Third
+
+Ordered List
+1. First
+2. Second
+3. Third
+
+### Horizontal bar
+
+---
+
+### Quote
+
+> I've looked at clouds from both sides now
+
+### Callout
+
+<Callout mode="info">Highlights information that users should take into account, even when skimming.</Callout>
+
+<Callout mode="warning">Critical content demanding immediate user attention due to potential risks.</Callout>
+
+<Callout mode="danger">Negative potential consequences of an action.</Callout>
+
+### Code
+
+Inline code
+
+`console.log()`
+
+Code-block (basic)
+
+```py
+import DeepThought from 'deepthought';
+const dp = new DeepThought();
+
+const completion = await dp.chat.completion.create({
+  model: "deepthought",
+  messages: [
+    { role: "system", content: "Be helpful and concise" },
+    {
+      role: "human",
+      content: "What is the meaning of life?",
+    },
+  ]
+});
+```
+Code-block (enhanced)
+
+```py title="llm.py" showLineNumbers {9, 10}
+import DeepThought from 'deepthought';
+const dp = new DeepThought();
+
+const completion = await dp.chat.completion.create({
+  model: "deepthought",
+  messages: [
+    { role: "system", content: "Be helpful and concise" },
+    {
+      role: "human",
+      content: "What is the meaning of life?",
+    },
+  ]
+});
+```
+
+### Image
+
+![This is a wabi sabi image](/images/wabisabi.jpeg)
+
+
+### Canvas
+<Canvas>
+  This is a canvas
+</Canvas>
+
+With title
+
+<Canvas title="An amazing title">
+  This is a canvas with a title
+</Canvas>
+
+---
+
+#### Helful Ressources
+
+##### - [Typography in ten minutes](https://practicaltypography.com/typography-in-ten-minutes.html): a small blog post on what to do to have a good looking text
+##### - Josh Comeau's blog post style
