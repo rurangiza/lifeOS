@@ -1,9 +1,11 @@
 {
+  "name": "site",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.0",
@@ -39,15 +41,5 @@
     "style-loader": "^4.0.0",
     "tailwindcss": "^4.0.9",
     "typescript": "^5.8.2"
-  },
-  "pnpm": {
-    "ignoredBuiltDependencies": [
-      "contentlayer",
-      "esbuild",
-      "protobufjs"
-    ],
-    "onlyBuiltDependencies": [
-      "contentlayer"
-    ]
   }
 }

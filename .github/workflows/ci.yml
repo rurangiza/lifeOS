@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # turbo --affected diffs against the base branch, so it needs history.
+          fetch-depth: 0
+
+      # Installs node, pnpm, python and uv from mise.toml, so CI and local
+      # machines run identical versions.
+      - uses: jdx/mise-action@v2
+
+      - run: pnpm install --frozen-lockfile
+
+      # Covers TypeScript and Python alike: any package exposing these scripts
+      # is picked up, and packages with no such script are skipped.
+      - run: pnpm turbo run lint typecheck test build --affected
