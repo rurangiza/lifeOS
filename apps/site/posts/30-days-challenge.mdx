@@ -1,0 +1,36 @@
+---
+title: 30 days challenge
+date: 2025-03-25
+published: true
+---
+
+import { Ball, Square } from '@/app/components/30DaysAnimations/30DaysAnimations'
+import Board from '@/app/components/Board/Board'
+import Subtitle from '@/app/components/Subtitle/Subtitle'
+import Canvas from "@/app/components/Canvas/Canvas"
+
+export const metadata = {
+  title: 'Motion Playground',
+  description: 'Learning about motion', 
+  alternates: {
+    canonical: '/notes/motion-playground'
+  }
+};
+
+<GoHome/>
+
+# 30 days challenge: Framer Motion
+
+To write the type of articles I have in mind, I need to be comfortable creating animations. So For 30 days, I will create animations to learn [Motion](https://motion.dev/docs/react-quick-start).
+
+### Day 1: shrinking ball
+##### March 4th, 2025
+<Canvas>
+<Ball />
+</Canvas>
+
+### Day 2: traveling square
+##### March 3rd, 2025
+
+Click on the Square to make it move
+<Canvas centered={false}><Square/></Canvas>

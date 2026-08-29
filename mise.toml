@@ -1,0 +1,9 @@
+# Toolchain for the whole monorepo. Run `mise install` after cloning.
+# Vercel does not read this file, which is why the root package.json also
+# carries `packageManager` and `engines.node`.
+
+[tools]
+node = "22"
+pnpm = "10"
+python = "3.13"
+uv = "latest"

@@ -1,0 +1,17 @@
+# Virtual workspace root: lifeOS itself is not a Python package, it just
+# owns the shared lockfile and the list of members.
+#
+# To add a Python project:
+#   1. uv init --package apps/<name>   (creates apps/<name>/pyproject.toml)
+#   2. add apps/<name>/package.json so Turborepo can see it:
+#        { "name": "<name>", "private": true, "scripts": {
+#            "lint":      "uv run --package <name> ruff check .",
+#            "typecheck": "uv run --package <name> ty check .",
+#            "test":      "uv run --package <name> pytest" } }
+#   3. uv sync
+# Turbo then picks it up through pnpm-workspace.yaml's apps/* glob, so
+# `turbo run test` and `--affected` cover it like any TypeScript package.
+
+[tool.uv.workspace]
+members = ["apps/*", "packages/*"]
+exclude = ["apps/site"]
