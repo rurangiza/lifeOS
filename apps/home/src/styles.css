@@ -1,0 +1,121 @@
+/*
+  Home — design notes
+  Idea: a flat being made yours. Limewashed walls, an architect's ink line,
+  paint chips for rooms. The floor plan is the one memorable thing; the rest
+  stays quiet so it can carry the colour.
+  Colour: limewash paper, slate ink, cobalt for selection and focus.
+  Category colours only appear as map pins and their matching dots.
+  Type: Familjen Grotesk for everything; Barlow Semi Condensed for
+  measurements and walking minutes, the way dimensions sit on a plan.
+*/
+@import "tailwindcss";
+
+:root {
+  color-scheme: light dark;
+  --paper: #f1f2ee;
+  --paper-2: #e6e8e2;
+  --card: #fbfbf9;
+  --ink: #1e2b2f;
+  --ink-2: #56636a;
+  --line: #c9cdc5;
+  --cobalt: #2346d6;
+  --cobalt-wash: #dfe5fb;
+  --danger: #b4321f;
+  --plan-wall: #1e2b2f;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #141a1c;
+    --paper-2: #1d2528;
+    --card: #1a2124;
+    --ink: #e6e8e3;
+    --ink-2: #9aa6ab;
+    --line: #34403f;
+    --cobalt: #7c92ff;
+    --cobalt-wash: #232c4d;
+    --danger: #ff8a75;
+    --plan-wall: #e6e8e3;
+  }
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-line: var(--line);
+  --color-cobalt: var(--cobalt);
+  --color-cobalt-wash: var(--cobalt-wash);
+  --color-danger: var(--danger);
+  --font-sans: "Familjen Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-dim: "Barlow Semi Condensed", "Arial Narrow", ui-sans-serif, sans-serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--cobalt);
+  outline-offset: 2px;
+}
+
+input,
+textarea,
+select {
+  font-size: 16px; /* below 16px iOS zooms the page on focus */
+}
+
+dialog::backdrop {
+  background: rgb(10 16 18 / 0.45);
+}
+
+dialog[open] {
+  animation: sheet-in 180ms ease-out;
+}
+
+@keyframes sheet-in {
+  from {
+    transform: translateY(16px);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  dialog[open] {
+    animation: none;
+  }
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.pt-safe {
+  padding-top: env(safe-area-inset-top);
+}
+
+/* MapLibre controls, restyled to match */
+.maplibregl-ctrl-group {
+  background: var(--card) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 0 0 1px var(--line) !important;
+}
+.maplibregl-ctrl-attrib {
+  font-size: 11px;
+}

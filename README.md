@@ -7,6 +7,7 @@ both TypeScript and Python projects.
 
 ```
 apps/site/     developer blog. Next.js 15, MDX, Contentlayer. Deployed on Vercel.
+apps/home/     my flat: neighbourhood map, floor plans, room plans. Vite, React.
 packages/      shared code. Empty until something is genuinely shared twice.
 ```
 
